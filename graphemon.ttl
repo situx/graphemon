@@ -1,0 +1,127 @@
+@prefix : <http://www.purl.org/graphemon/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cidoc: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix lemon: <http://lemon-model.net/lemon#> .
+@base <http://www.purl.org/graphemon/> .
+
+<http://www.purl.org/graphemon/> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://lemon-model.net/lemon#LexialEntry
+lemon:LexialEntry rdf:type owl:Class ;
+                  rdfs:label "lexical entry" .
+
+
+###  http://lemon-model.net/lemon#LexicalForm
+lemon:LexicalForm rdf:type owl:Class ;
+                  rdfs:label "lexical form" .
+
+
+###  http://lemon-model.net/lemon#LexicalSense
+lemon:LexicalSense rdf:type owl:Class ;
+                   rdfs:label "sense" .
+
+
+###  http://lemon-model.net/lemon#Lexicon
+lemon:Lexicon rdf:type owl:Class ;
+              rdfs:label "lexicon" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/TX6_Glyph
+cidoc:TX6_Glyph rdf:type owl:Class ;
+                rdfs:label "glyph" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "The physical manifestation of a grapheme" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme
+cidoc:TXP9_Grapheme rdf:type owl:Class ;
+                    rdfs:label "grapheme" ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "A standardized form of representation of a grapheme" .
+
+
+###  http://www.purl.org/graphemon/ChineseCharacterStroke
+:ChineseCharacterStroke rdf:type owl:Class ;
+                        rdfs:subClassOf :Stroketyped ;
+                        rdfs:label "Chinese character stroke" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "Strokes used to draw Chinese characters" .
+
+
+###  http://www.purl.org/graphemon/CuneiformWedge
+:CuneiformWedge rdf:type owl:Class ;
+                rdfs:subClassOf :Stroketyped ;
+                rdfs:label "cuneiform wedge" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Wedges used to write cuneiform signs" .
+
+
+###  http://www.purl.org/graphemon/EgyptianHieroglyphicAtomicPart
+:EgyptianHieroglyphicAtomicPart rdf:type owl:Class ;
+                                rdfs:subClassOf :ideographic-typed ;
+                                rdfs:label "egyptian hieroglyphic atomic part" ;
+                                <http://www.w3.org/2004/02/skos/core#definition> "An undividable part of an egyptian hieroglyphic which is used to compose other hieroglyphics" .
+
+
+###  http://www.purl.org/graphemon/GraphemeAtomicPart
+:GraphemeAtomicPart rdf:type owl:Class ;
+                    rdfs:label "grapheme atomic part" ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "A part of a grapheme which cannot be broken down into further parts" ;
+                    <http://www.w3.org/2004/02/skos/core#example> "A stroke in a Chinese or Japanese character" .
+
+
+###  http://www.purl.org/graphemon/GraphemePart
+:GraphemePart rdf:type owl:Class ;
+              rdfs:label "grapheme part" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "A grapheme which is used as part of another grapheme" .
+
+
+###  http://www.purl.org/graphemon/GraphemeVariant
+:GraphemeVariant rdf:type owl:Class ;
+                 rdfs:label "grapheme variant" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "A variant of a grapheme which is distinguished by a set of criteria, usually varying semantics or shape from a canonical grapheme" .
+
+
+###  http://www.purl.org/graphemon/JapaneseCharacterStroke
+:JapaneseCharacterStroke rdf:type owl:Class ;
+                         rdfs:subClassOf :ChineseCharacterStroke ;
+                         rdfs:label "Kanji character stroke" ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "Strokes used to write Chinese characters used in the Japanese language" .
+
+
+###  http://www.purl.org/graphemon/OghamSignStroke
+:OghamSignStroke rdf:type owl:Class ;
+                 rdfs:subClassOf :Stroketyped ;
+                 rdfs:label "Ogham sign stroke" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Stroke as a central component of the signs of the Ogham language" .
+
+
+###  http://www.purl.org/graphemon/Stroketyped
+:Stroketyped rdf:type owl:Class ;
+             rdfs:subClassOf :GraphemeAtomicPart ;
+             rdfs:label "stroke-typed" .
+
+
+###  http://www.purl.org/graphemon/ideographic-typed
+:ideographic-typed rdf:type owl:Class ;
+                   rdfs:subClassOf :GraphemeAtomicPart ;
+                   rdfs:label "ideographic typed atomic part" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
