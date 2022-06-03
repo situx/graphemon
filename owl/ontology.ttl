@@ -23,6 +23,51 @@
 
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.purl.org/graphemon/hasAtomicPart
+:hasAtomicPart rdf:type owl:ObjectProperty ;
+               rdfs:domain cidoc:TXP9_Grapheme ,
+                           :GraphemePart ,
+                           :GraphemeVariant ;
+               rdfs:range :GraphemeAtomicPart ;
+               rdfs:label "has atomic part" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Relates to an atomic part which is included in the current grapheme" .
+
+
+###  http://www.purl.org/graphemon/hasPart
+:hasPart rdf:type owl:ObjectProperty ;
+         rdfs:domain cidoc:TXP9_Grapheme ,
+                     :GraphemeVariant ;
+         rdfs:range :GraphemePart ;
+         rdfs:label "has part" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Part of a grapheme representation which may be reused in other graphemes" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.purl.org/graphemon/hasIdentifier
+:hasIdentifier rdf:type owl:DatatypeProperty ;
+               rdfs:domain cidoc:TXP9_Grapheme ,
+                           :GraphemeVariant ;
+               rdfs:range xsd:string ;
+               rdfs:label "has identifier" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Relates a Grapheme to a String representation identifiying it in a particular context" .
+
+
+###  http://www.purl.org/graphemon/hasUnicodeCodePoint
+:hasUnicodeCodePoint rdf:type owl:DatatypeProperty ;
+                     rdfs:domain cidoc:TXP9_Grapheme ,
+                                 :GraphemeVariant ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "has unicode code point" ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "Relates a grapheme to a unicode code point which identifies it" .
+
+
+#################################################################
 #    Classes
 #################################################################
 
@@ -81,6 +126,7 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
 
 ###  http://www.purl.org/graphemon/GraphemeAtomicPart
 :GraphemeAtomicPart rdf:type owl:Class ;
+                    rdfs:subClassOf :GraphemePart ;
                     rdfs:label "grapheme atomic part" ;
                     <http://www.w3.org/2004/02/skos/core#definition> "A part of a grapheme which cannot be broken down into further parts" ;
                     <http://www.w3.org/2004/02/skos/core#example> "A stroke in a Chinese or Japanese character" .
@@ -94,6 +140,7 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
 
 ###  http://www.purl.org/graphemon/GraphemeVariant
 :GraphemeVariant rdf:type owl:Class ;
+                 rdfs:subClassOf cidoc:TXP9_Grapheme ;
                  rdfs:label "grapheme variant" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A variant of a grapheme which is distinguished by a set of criteria, usually varying semantics or shape from a canonical grapheme" .
 
