@@ -8,7 +8,8 @@
 @prefix lemon: <http://lemon-model.net/lemon#> .
 @base <http://www.purl.org/graphemon/> .
 
-<http://www.purl.org/graphemon/> rdf:type owl:Ontology .
+<http://www.purl.org/graphemon/> rdf:type owl:Ontology ;
+                                  rdfs:label "Grapheme Model for Ontologies (Graphemon) Ontology" .
 
 #################################################################
 #    Annotation properties
@@ -91,6 +92,13 @@ lemon:Lexicon rdf:type owl:Class ;
               rdfs:label "lexicon" .
 
 
+###  http://lemon-model.net/lemon#Word
+lemon:Word rdf:type owl:Class ;
+           rdfs:subClassOf lemon:LexicalForm ;
+           rdfs:label "Word form" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "A grammatical form of a word" .
+
+
 ###  http://www.cidoc-crm.org/cidoc-crm/TX6_Glyph
 cidoc:TX6_Glyph rdf:type owl:Class ;
                 rdfs:label "glyph" ;
@@ -99,6 +107,7 @@ cidoc:TX6_Glyph rdf:type owl:Class ;
 
 ###  http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme
 cidoc:TXP9_Grapheme rdf:type owl:Class ;
+                    rdfs:subClassOf :GraphemeManifestation ;
                     rdfs:label "grapheme" ;
                     <http://www.w3.org/2004/02/skos/core#definition> "A standardized form of representation of a grapheme" .
 
@@ -132,6 +141,18 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
                     <http://www.w3.org/2004/02/skos/core#example> "A stroke in a Chinese or Japanese character" .
 
 
+###  http://www.purl.org/graphemon/GraphemeCognate
+:GraphemeCognate rdf:type owl:Class ;
+                 rdfs:label "grapheme cognate" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "A cognate between graphemes" .
+
+
+###  http://www.purl.org/graphemon/GraphemeManifestation
+:GraphemeManifestation rdf:type owl:Class ;
+                       rdfs:label "grapheme manifestation" ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "The manifestation of a grapheme in a written or non-written form" .
+
+
 ###  http://www.purl.org/graphemon/GraphemePart
 :GraphemePart rdf:type owl:Class ;
               rdfs:label "grapheme part" ;
@@ -152,6 +173,12 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Strokes used to write Chinese characters used in the Japanese language" .
 
 
+###  http://www.purl.org/graphemon/LexicalFormOccurence
+:LexicalFormOccurence rdf:type owl:Class ;
+                      rdfs:label "lexical form occurrence" ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "An occurrence of a lexical form linked to its grapheme composition" .
+
+
 ###  http://www.purl.org/graphemon/OghamSignStroke
 :OghamSignStroke rdf:type owl:Class ;
                  rdfs:subClassOf :Stroketyped ;
@@ -163,6 +190,13 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
 :Stroketyped rdf:type owl:Class ;
              rdfs:subClassOf :GraphemeAtomicPart ;
              rdfs:label "stroke-typed" .
+
+
+###  http://www.purl.org/graphemon/WordOccurence
+:WordOccurence rdf:type owl:Class ;
+               rdfs:subClassOf :LexicalFormOccurence ;
+               rdfs:label "word form occurence" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "An occurence of a word form linked to its grapheme composition" .
 
 
 ###  http://www.purl.org/graphemon/ideographic-typed
