@@ -27,6 +27,33 @@
 #    Object Properties
 #################################################################
 
+###  http://www.purl.org/graphemon/above
+:above rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :directionProperty ;
+       rdfs:label "above" .
+
+
+###  http://www.purl.org/graphemon/below
+:below rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :directionProperty ;
+       rdfs:label "below" .
+
+
+###  http://www.purl.org/graphemon/directionProperty
+:directionProperty rdf:type owl:ObjectProperty ;
+                   rdfs:label "direction property" .
+
+
+###  http://www.purl.org/graphemon/graphemeSense
+:graphemeSense rdf:type owl:ObjectProperty ;
+               rdfs:domain :GraphemeAtomicPart ,
+                           :GraphemeManifestation ,
+                           :GraphemePart ;
+               rdfs:range :GraphemeSense ;
+               rdfs:label "grapheme sense" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Relates a sense instance to a given grapheme" .
+
+
 ###  http://www.purl.org/graphemon/hasAtomicPart
 :hasAtomicPart rdf:type owl:ObjectProperty ;
                rdfs:domain cidoc:TXP9_Grapheme ,
@@ -37,6 +64,19 @@
                <http://www.w3.org/2004/02/skos/core#definition> "Relates to an atomic part which is included in the current grapheme" .
 
 
+###  http://www.purl.org/graphemon/hasColor
+:hasColor rdf:type owl:ObjectProperty ;
+          rdfs:domain cidoc:TX6_Glyph ;
+          rdfs:label "has color" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Relates a glyph or a glyph part of a color" .
+
+
+###  http://www.purl.org/graphemon/hasMaterial
+:hasMaterial rdf:type owl:ObjectProperty ;
+             rdfs:domain cidoc:TX6_Glyph ;
+             rdfs:label "has material" .
+
+
 ###  http://www.purl.org/graphemon/hasPart
 :hasPart rdf:type owl:ObjectProperty ;
          rdfs:domain cidoc:TXP9_Grapheme ,
@@ -44,6 +84,18 @@
          rdfs:range :GraphemePart ;
          rdfs:label "has part" ;
          <http://www.w3.org/2004/02/skos/core#definition> "Part of a grapheme representation which may be reused in other graphemes" .
+
+
+###  http://www.purl.org/graphemon/leftOf
+:leftOf rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :directionProperty ;
+        rdfs:label "left of" .
+
+
+###  http://www.purl.org/graphemon/rightOf
+:rightOf rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :directionProperty ;
+         rdfs:label "right of" .
 
 
 #################################################################
@@ -66,6 +118,15 @@
                      rdfs:range xsd:string ;
                      rdfs:label "has unicode code point" ;
                      <http://www.w3.org/2004/02/skos/core#definition> "Relates a grapheme to a unicode code point which identifies it" .
+
+
+###  http://www.purl.org/graphemon/isDamaged
+:isDamaged rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain cidoc:TX6_Glyph ;
+           rdfs:range xsd:boolean ;
+           rdfs:label "is damaged" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether a glyph is damaged" .
 
 
 #################################################################
@@ -95,7 +156,7 @@ lemon:Lexicon rdf:type owl:Class ;
 ###  http://lemon-model.net/lemon#Word
 lemon:Word rdf:type owl:Class ;
            rdfs:subClassOf lemon:LexicalForm ;
-           rdfs:label "Word form" ;
+           rdfs:label "word form" ;
            <http://www.w3.org/2004/02/skos/core#definition> "A grammatical form of a word" .
 
 
@@ -157,6 +218,12 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
 :GraphemePart rdf:type owl:Class ;
               rdfs:label "grapheme part" ;
               <http://www.w3.org/2004/02/skos/core#definition> "A grapheme which is used as part of another grapheme" .
+
+
+###  http://www.purl.org/graphemon/GraphemeSense
+:GraphemeSense rdf:type owl:Class ;
+               rdfs:label "grapheme sense" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Sense of a grapheme, which may or may not be independent of the sense of words using this grapheme" .
 
 
 ###  http://www.purl.org/graphemon/GraphemeVariant
