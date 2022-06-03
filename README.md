@@ -1,22 +1,43 @@
-# graphemon
-Extension of the lemon model for graphemes, grapheme variants, glyphs and beyond
+# Graphemon - Grapheme Model for ontologies
+This repository contains a complimentary ontology model to the Ontolex-Lemon model for dictionaries.
+Its goal is the representation of grpahemes and grapheme variants and the connection of these variants to actual representations of graphemes, e.g. glyphs on given mediums.
 
 # Foundations
-
-The ontology model consists of three fundamental concepts:
+To explain the core of the ontology model, the following fundamental concepts should be explored:
 * **Glyph**: A physical representation of a written script as defined by the CIDOC CRMtex extension
-* **Grapheme**: A normalized version of a set of glyphs defined in a written language
-* **GraphemeVariant**: A variant of a normalized form of a Grapheme
+* **GraphemeVariant**: A variant of a normalized form of a set of Glyphs
+* **Grapheme**: The description of a set of GrapheVariants which share a common identifier such as a Unicode code point or dictionary entry
+* **GraphemeManifestiation**: Superclass of Grapheme and GraphemeVariant: A manifestation of a grapheme in a written or non-written form
 
-Defining the canonical Grapheme vs. the GraphemeVariants is a script-dependent task.
+Each Grapheme is expected to be assigned a GraphemVariant which should be marked as the canonical or standard grapheme variant.
+This variant might be defined by a community of scholars or it might be inferred by an algorithm (e.g. the most occurring grapheme variant could be classified as the canonical variant)
+The method of detection of a canonical variant should be documented in the vocabulary.
 
-For example: In the cuneiform script, we consider a grapheme a new graphemvariant if
+It also should be noted that defining cnonical Grapheme vs. the GraphemeVariants is a script-dependent and usually not a language-dependent task.
+
+For example: In the cuneiform script, we consider a Grapheme a new Graphemvariant if
 * it depicts the same meaning as the canonical Grapheme
 * adds or removes cuneiform wedges in comparison to the canonical form
 * shifts the order or position of wedges as compared to the canonical Grapheme
 
 The nature of these definitions need to be adjusted by language, possibly be individual scholars.
 
+# Graphemon Ontology Model
+
 ## Representation of grapheme variants
+
+## GraphemeVariant Etymology
+
+# Relation to existing ontology models
+
+## Relation to the Ontolex-Lemon model
+
+## Relation to the CIDOC-CRM CRMtex model
+
+# Examples
+
+## Cuneiform word "A"
+
+# Applicability to other scripts
 
 
