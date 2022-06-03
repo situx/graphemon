@@ -28,7 +28,7 @@ The nature of these definitions need to be adjusted by language, possibly be ind
 
 ## GraphemeVariant Etymology
 
-Similar to the representation of (https://github.com/anasfkhan81/lemonEty)[lemonETY], this ontology model supports to model etymology relations of grapheme variants.
+Similar to the representation of [lemonETY](https://github.com/anasfkhan81/lemonEty), this ontology model supports to model etymology relations of grapheme variants.
 
 ### Similarity of GraphemeVariants
 
