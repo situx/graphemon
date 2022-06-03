@@ -28,15 +28,29 @@ The nature of these definitions need to be adjusted by language, possibly be ind
 
 ## GraphemeVariant Etymology
 
+Similar to the representation of (https://github.com/anasfkhan81/lemonEty)[lemonETY], this ontology model supports to model etymology relations of grapheme variants.
+
+### Similarity of GraphemeVariants
+
+GraphemeVariants can be distinguished by etymological relations (on a semantic level), but can also be related by similarity metrics targeting the appearance of either the Grapheme shape or description or the glyph shape or representation.
+For example, to distinguish cuneiform signs, one may use image similarity measurements on representations of Graphemes in PNG or SVG and may choose String similarity metrics to highlight differences on String descriptions such as character description languages.
+Results of these similarity calculations can be added as relations in the ontology model.
+
 # Relation to existing ontology models
 
 ## Relation to the Ontolex-Lemon model
 
 ## Relation to the CIDOC-CRM CRMtex model
 
-# Examples
+# Usage examples of the ontology model
 
 ## Cuneiform word "A"
+
+# Application of the ontology model
+
+## Creation of machine learning resources
+
+The ontology model may be used to query targeted data to create machine learning datasets based on glyphs.
 
 # Applicability to other scripts
 
