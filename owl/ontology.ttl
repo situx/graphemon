@@ -27,6 +27,11 @@
 #    Object Properties
 #################################################################
 
+###  http://lemon-model.net/lemon#reference
+lemon:reference rdf:type owl:ObjectProperty ;
+                rdfs:label "reference" .
+
+
 ###  http://www.purl.org/graphemon/above
 :above rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf :directionProperty ;
@@ -206,6 +211,17 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
 :GraphemeCognate rdf:type owl:Class ;
                  rdfs:label "grapheme cognate" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A cognate between graphemes" .
+
+
+###  http://www.purl.org/graphemon/GraphemeEtylink
+:GraphemeEtylink rdf:type owl:Class ;
+                 rdfs:label "grapheme etylink" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "An etymological link between two graphemes or grapheme variants" .
+
+
+###  http://www.purl.org/graphemon/GraphemeEtymon
+:GraphemeEtymon rdf:type owl:Class ;
+                rdfs:label "grapheme etymon" .
 
 
 ###  http://www.purl.org/graphemon/GraphemeManifestation
