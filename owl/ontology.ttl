@@ -35,18 +35,27 @@ lemon:reference rdf:type owl:ObjectProperty ;
 ###  http://www.purl.org/graphemon/above
 :above rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf :directionProperty ;
-       rdfs:label "above" .
+       rdfs:domain :GraphemeAtomicPart ;
+       rdfs:range :GraphemeAtomicPart ;
+       rdfs:label "above" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "Property indicating that an atomic part is above another atomic part" .
 
 
 ###  http://www.purl.org/graphemon/below
 :below rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf :directionProperty ;
-       rdfs:label "below" .
+       rdfs:domain :GraphemeAtomicPart ;
+       rdfs:range :GraphemeAtomicPart ;
+       rdfs:label "below" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "Property indicating that an atomic part is below another atomic part" .
 
 
 ###  http://www.purl.org/graphemon/directionProperty
 :directionProperty rdf:type owl:ObjectProperty ;
-                   rdfs:label "direction property" .
+                   rdfs:domain :GraphemeAtomicPart ;
+                   rdfs:range :GraphemeAtomicPart ;
+                   rdfs:label "direction property" ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "A property indicating the direction of a grapheme atomic part" .
 
 
 ###  http://www.purl.org/graphemon/graphemeEtySource
@@ -115,7 +124,10 @@ lemon:reference rdf:type owl:ObjectProperty ;
 ###  http://www.purl.org/graphemon/leftOf
 :leftOf rdf:type owl:ObjectProperty ;
         rdfs:subPropertyOf :directionProperty ;
-        rdfs:label "left of" .
+        rdfs:domain :GraphemeAtomicPart ;
+        rdfs:range :GraphemeAtomicPart ;
+        rdfs:label "left of" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Property indicating that an atomic part is left of another atomic part" .
 
 
 ###  http://www.purl.org/graphemon/linkBasedOn
@@ -129,7 +141,20 @@ lemon:reference rdf:type owl:ObjectProperty ;
 ###  http://www.purl.org/graphemon/rightOf
 :rightOf rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf :directionProperty ;
-         rdfs:label "right of" .
+         rdfs:domain :GraphemeAtomicPart ;
+         rdfs:range :GraphemeAtomicPart ;
+         rdfs:label "right of" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Property indicating that an atomic part is right of another atomic part" .
+
+
+###  http://www.purl.org/graphemon/similarityLinkSource
+:similarityLinkSource rdf:type owl:ObjectProperty ;
+                      rdfs:label "similarity link source" .
+
+
+###  http://www.purl.org/graphemon/similarityLinkTarget
+:similarityLinkTarget rdf:type owl:ObjectProperty ;
+                      rdfs:label "similarity link target" .
 
 
 #################################################################
@@ -297,6 +322,19 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A variant of a grapheme which is distinguished by a set of criteria, usually varying semantics or shape from a canonical grapheme" .
 
 
+###  http://www.purl.org/graphemon/ImageBasedSimilarityLink
+:ImageBasedSimilarityLink rdf:type owl:Class ;
+                          rdfs:subClassOf :SimilarityLink ;
+                          rdfs:label "image based similarity link" ;
+                          <http://www.w3.org/2004/02/skos/core#definition> "A similarity link which is based on an image similarity metric" .
+
+
+###  http://www.purl.org/graphemon/ImageBasedSimilarityMetric
+:ImageBasedSimilarityMetric rdf:type owl:Class ;
+                            rdfs:subClassOf :SimilarityMetric ;
+                            rdfs:label "image based similarity metric" .
+
+
 ###  http://www.purl.org/graphemon/JapaneseCharacterStroke
 :JapaneseCharacterStroke rdf:type owl:Class ;
                          rdfs:subClassOf :ChineseCharacterStroke ;
@@ -333,6 +371,12 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
                            rdfs:subClassOf :SimilarityLink ;
                            rdfs:label "string based similarity link" ;
                            <http://www.w3.org/2004/02/skos/core#definition> "A similarity link which base is a String similarity metric" .
+
+
+###  http://www.purl.org/graphemon/StringbasedSimilarityMetric
+:StringbasedSimilarityMetric rdf:type owl:Class ;
+                             rdfs:subClassOf :SimilarityMetric ;
+                             rdfs:label "string based similarity metric" .
 
 
 ###  http://www.purl.org/graphemon/Stroketyped
