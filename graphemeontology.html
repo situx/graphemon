@@ -259,12 +259,15 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
       <li><a href="#graphemepart">grapheme part</a></li>
       <li><a href="#GraphemeSense">grapheme sense</a></li>
       <li><a href="#graphemevariant">grapheme variant</a></li>
+      <li><a href="#imagebasedsimilaritylink">image based similarity link</a></li>
+      <li><a href="#imagebasedsimilaritymetric">image based similarity metric</a></li>
       <li><a href="#Kanjicharacterstroke">Kanji character stroke</a></li>
       <li><a href="#lexicalformoccurrence">lexical form occurrence</a></li>
       <li><a href="#Oghamsignstroke">Ogham sign stroke</a></li>
       <li><a href="#similaritylink">similarity link</a></li>
       <li><a href="#similaritymetric">similarity metric</a></li>
       <li><a href="#stringbasedsimilaritylink">string based similarity link</a></li>
+      <li><a href="#stringbasedsimilaritymetric">string based similarity metric</a></li>
       <li><a href="#stroke-typed">stroke-typed</a></li>
       <li><a href="#wordformoccurence">word form occurence</a></li>
       <li><a href="#ideographictypedatomicpart">ideographic typed atomic part</a></li>
@@ -404,10 +407,10 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#hasunicodecodepoint">has unicode code point</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#haspart">has part</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasidentifier">has identifier</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#hasatomicpart">has atomic part</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#haspart">has part</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasunicodecodepoint">has unicode code point</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
         </table>
@@ -521,20 +524,30 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#ideographictypedatomicpart">ideographic typed atomic part</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#stroke-typed">stroke-typed</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#ideographictypedatomicpart">ideographic typed atomic part</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="#rightof">right of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#above">above</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#graphemesense">grapheme sense</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#below">below</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#directionproperty">direction property</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#leftof">left of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
                     <a href="#hasatomicpart">has atomic part</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#leftof">left of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#directionproperty">direction property</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#below">below</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#rightof">right of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#above">above</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -619,16 +632,16 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#graphemesense">grapheme sense</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#isgraphemecognateof">is grapheme cognate of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#graphemesense">grapheme sense</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#isgraphemecognateof">is grapheme cognate of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#graphemeetymologysource">grapheme etymology source</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#graphemeetymologytarget">grapheme etymology target</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#graphemeetymologysource">grapheme etymology source</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isgraphemecognateof">is grapheme cognate of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -719,10 +732,52 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="#haspart">has part</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasunicodecodepoint">has unicode code point</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#hasatomicpart">has atomic part</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasidentifier">has identifier</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#hasunicodecodepoint">has unicode code point</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#haspart">has part</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="imagebasedsimilaritylink">
+        <h3>
+          image based similarity link<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#imagebasedsimilaritylink" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/ImageBasedSimilarityLink</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A similarity link which is based on an image similarity metric</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#similaritylink">similarity link</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="imagebasedsimilaritymetric">
+        <h3>
+          image based similarity metric<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#imagebasedsimilaritymetric" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/ImageBasedSimilarityMetric</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#similaritymetric">similarity metric</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -819,6 +874,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 <th>Sub-classes</th>
                 <td>
                     <a href="#stringbasedsimilaritylink">string based similarity link</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#imagebasedsimilaritylink">image based similarity link</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -838,6 +894,13 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>URI</th>
                 <td><code>http://www.purl.org/graphemon/SimilarityMetric</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#imagebasedsimilaritymetric">image based similarity metric</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#stringbasedsimilaritymetric">string based similarity metric</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
             </tr>
             <tr>
                 <th>In range of</th>
@@ -871,6 +934,24 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             </tr>
         </table>
     </div>
+    <div class="entity class" id="stringbasedsimilaritymetric">
+        <h3>
+          string based similarity metric<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#stringbasedsimilaritymetric" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/StringbasedSimilarityMetric</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#similaritymetric">similarity metric</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity class" id="stroke-typed">
         <h3>
           stroke-typed<sup title="class" class="sup-c">c</sup>
@@ -890,9 +971,9 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#Chinesecharacterstroke">Chinese character stroke</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#cuneiformwedge">cuneiform wedge</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#Oghamsignstroke">Ogham sign stroke</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#cuneiformwedge">cuneiform wedge</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Chinesecharacterstroke">Chinese character stroke</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -964,6 +1045,8 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
         <li><a href="#leftof">left of</a></li>
         <li><a href="#linkbasedon">link based on</a></li>
         <li><a href="#rightof">right of</a></li>
+        <li><a href="#similaritylinksource">similarity link source</a></li>
+        <li><a href="#similaritylinktarget">similarity link target</a></li>
     </ul>
     <div class="entity property" id="reference">
         <h3>reference<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
@@ -986,9 +1069,27 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 <td><code>http://www.purl.org/graphemon/above</code></td>
             </tr>
             <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property indicating that an atomic part is above another atomic part</p>
+                </td>
+            </tr>
+            <tr>
                 <th>Super-properties</th>
                 <td>
                     <a href="#directionproperty">direction property</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#graphemeatomicpart">grapheme atomic part</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.purl.org/graphemon/GraphemeAtomicPart">GraphemeAtomicPart</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -1003,9 +1104,27 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 <td><code>http://www.purl.org/graphemon/below</code></td>
             </tr>
             <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property indicating that an atomic part is below another atomic part</p>
+                </td>
+            </tr>
+            <tr>
                 <th>Super-properties</th>
                 <td>
                     <a href="#directionproperty">direction property</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#graphemeatomicpart">grapheme atomic part</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.purl.org/graphemon/GraphemeAtomicPart">GraphemeAtomicPart</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -1018,6 +1137,24 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>URI</th>
                 <td><code>http://www.purl.org/graphemon/directionProperty</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A property indicating the direction of a grapheme atomic part</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#graphemeatomicpart">grapheme atomic part</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.purl.org/graphemon/GraphemeAtomicPart">GraphemeAtomicPart</a><sup class="sup-c" title="class">c</sup>
+                </td>
             </tr>
         </table>
     </div>
@@ -1085,9 +1222,9 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Domain(s)</th>
                 <td>
+                    <a href="#graphemeatomicpart">grapheme atomic part</a><sup class="sup-c" title="class">c</sup>
                     <a href="#graphemepart">grapheme part</a><sup class="sup-c" title="class">c</sup>
                     <a href="#graphememanifestation">grapheme manifestation</a><sup class="sup-c" title="class">c</sup>
-                    <a href="#graphemeatomicpart">grapheme atomic part</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1116,9 +1253,9 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="#graphemevariant">grapheme variant</a><sup class="sup-c" title="class">c</sup>
-                    <a href="#graphemepart">grapheme part</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme">cidoc:TXP9_Grapheme</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#graphemepart">grapheme part</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#graphemevariant">grapheme variant</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1187,8 +1324,8 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme">cidoc:TXP9_Grapheme</a><sup class="sup-c" title="class">c</sup>
                     <a href="#graphemevariant">grapheme variant</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme">cidoc:TXP9_Grapheme</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1232,9 +1369,27 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 <td><code>http://www.purl.org/graphemon/leftOf</code></td>
             </tr>
             <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property indicating that an atomic part is left of another atomic part</p>
+                </td>
+            </tr>
+            <tr>
                 <th>Super-properties</th>
                 <td>
                     <a href="#directionproperty">direction property</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#graphemeatomicpart">grapheme atomic part</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.purl.org/graphemon/GraphemeAtomicPart">GraphemeAtomicPart</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -1278,10 +1433,50 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 <td><code>http://www.purl.org/graphemon/rightOf</code></td>
             </tr>
             <tr>
+                <th>Description</th>
+                <td>
+                    <p>Property indicating that an atomic part is right of another atomic part</p>
+                </td>
+            </tr>
+            <tr>
                 <th>Super-properties</th>
                 <td>
                     <a href="#directionproperty">direction property</a><sup class="sup-op" title="object property">op</sup>
                 </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#graphemeatomicpart">grapheme atomic part</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.purl.org/graphemon/GraphemeAtomicPart">GraphemeAtomicPart</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="similaritylinksource">
+        <h3>similarity link source<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#similaritylinksource" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/similarityLinkSource</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="similaritylinktarget">
+        <h3>similarity link target<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#similaritylinktarget" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/similarityLinkTarget</code></td>
             </tr>
         </table>
     </div>
@@ -1315,8 +1510,8 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="#graphemevariant">grapheme variant</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme">cidoc:TXP9_Grapheme</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#graphemevariant">grapheme variant</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -1345,8 +1540,8 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme">cidoc:TXP9_Grapheme</a><sup class="sup-c" title="class">c</sup>
                     <a href="#graphemevariant">grapheme variant</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme">cidoc:TXP9_Grapheme</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
