@@ -49,6 +49,20 @@ lemon:reference rdf:type owl:ObjectProperty ;
                    rdfs:label "direction property" .
 
 
+###  http://www.purl.org/graphemon/graphemeEtySource
+:graphemeEtySource rdf:type owl:ObjectProperty ;
+                   rdfs:domain :GraphemeEtylink ;
+                   rdfs:range :GraphemeManifestation ;
+                   rdfs:label "grapheme etymology source" .
+
+
+###  http://www.purl.org/graphemon/graphemeEtyTarget
+:graphemeEtyTarget rdf:type owl:ObjectProperty ;
+                   rdfs:domain :GraphemeEtylink ;
+                   rdfs:range :GraphemeManifestation ;
+                   rdfs:label "grapheme etymology target" .
+
+
 ###  http://www.purl.org/graphemon/graphemeSense
 :graphemeSense rdf:type owl:ObjectProperty ;
                rdfs:domain :GraphemeAtomicPart ,
@@ -91,10 +105,25 @@ lemon:reference rdf:type owl:ObjectProperty ;
          <http://www.w3.org/2004/02/skos/core#definition> "Part of a grapheme representation which may be reused in other graphemes" .
 
 
+###  http://www.purl.org/graphemon/isGraphemeCognateOf
+:isGraphemeCognateOf rdf:type owl:ObjectProperty ;
+                     rdfs:domain :GraphemeManifestation ;
+                     rdfs:range :GraphemeManifestation ;
+                     rdfs:label "is grapheme cognate of" .
+
+
 ###  http://www.purl.org/graphemon/leftOf
 :leftOf rdf:type owl:ObjectProperty ;
         rdfs:subPropertyOf :directionProperty ;
         rdfs:label "left of" .
+
+
+###  http://www.purl.org/graphemon/linkBasedOn
+:linkBasedOn rdf:type owl:ObjectProperty ;
+             rdfs:domain :SimilarityLink ;
+             rdfs:range :SimilarityMetric ;
+             rdfs:label "link based on" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Metric or measurement a similarity link instance is based on" .
 
 
 ###  http://www.purl.org/graphemon/rightOf
@@ -132,6 +161,25 @@ lemon:reference rdf:type owl:ObjectProperty ;
            rdfs:range xsd:boolean ;
            rdfs:label "is damaged" ;
            <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether a glyph is damaged" .
+
+
+###  http://www.purl.org/graphemon/similarityLowerBound
+:similarityLowerBound rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:double ;
+                      rdfs:label "similarity low bound" ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "The lower bound of a similarity measurement" .
+
+
+###  http://www.purl.org/graphemon/similarityUpperBound
+:similarityUpperBound rdf:type owl:DatatypeProperty ;
+                      rdfs:label "similarity upper bound" ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "The upper bound of a similarity measurement" .
+
+
+###  http://www.purl.org/graphemon/upperBoundMostSimilar
+:upperBoundMostSimilar rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:boolean ;
+                       rdfs:label "upper bound most similar" .
 
 
 #################################################################
@@ -267,6 +315,24 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
                  rdfs:subClassOf :Stroketyped ;
                  rdfs:label "Ogham sign stroke" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "Stroke as a central component of the signs of the Ogham language" .
+
+
+###  http://www.purl.org/graphemon/SimilarityLink
+:SimilarityLink rdf:type owl:Class ;
+                rdfs:label "similarity link" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A linkage of similarity between two entities based on a given similarity metric" .
+
+
+###  http://www.purl.org/graphemon/SimilarityMetric
+:SimilarityMetric rdf:type owl:Class ;
+                  rdfs:label "similarity metric" .
+
+
+###  http://www.purl.org/graphemon/StringbasedSimilarityLink
+:StringbasedSimilarityLink rdf:type owl:Class ;
+                           rdfs:subClassOf :SimilarityLink ;
+                           rdfs:label "string based similarity link" ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "A similarity link which base is a String similarity metric" .
 
 
 ###  http://www.purl.org/graphemon/Stroketyped
