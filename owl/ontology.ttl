@@ -24,6 +24,26 @@
 
 
 #################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.purl.org/graphemon/gottsteinLiteral
+:gottsteinLiteral rdf:type rdfs:Datatype ;
+                  rdfs:label "Gottstein Literal" ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "String literal type describing a cuneiform sign using its Gottstein code" .
+
+
+###  http://www.purl.org/graphemon/paleocodeLiteral
+:paleocodeLiteral rdf:type rdfs:Datatype ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "String literal describing a cuneiform sign using the PaleoCodage encoding" .
+
+
+###  http://www.purl.org/graphemon/svgLiteral
+:svgLiteral rdf:type rdfs:Datatype ;
+            rdfs:label "SVG Literal" .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
@@ -102,7 +122,8 @@ lemon:reference rdf:type owl:ObjectProperty ;
 ###  http://www.purl.org/graphemon/hasMaterial
 :hasMaterial rdf:type owl:ObjectProperty ;
              rdfs:domain cidoc:TX6_Glyph ;
-             rdfs:label "has material" .
+             rdfs:label "has material" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Definition of the material which was used to create a glyph representation" .
 
 
 ###  http://www.purl.org/graphemon/hasPart
@@ -118,7 +139,8 @@ lemon:reference rdf:type owl:ObjectProperty ;
 :isGraphemeCognateOf rdf:type owl:ObjectProperty ;
                      rdfs:domain :GraphemeManifestation ;
                      rdfs:range :GraphemeManifestation ;
-                     rdfs:label "is grapheme cognate of" .
+                     rdfs:label "is grapheme cognate of" ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "Relates a grapheme to its cognate grapheme" .
 
 
 ###  http://www.purl.org/graphemon/leftOf
@@ -149,17 +171,34 @@ lemon:reference rdf:type owl:ObjectProperty ;
 
 ###  http://www.purl.org/graphemon/similarityLinkSource
 :similarityLinkSource rdf:type owl:ObjectProperty ;
-                      rdfs:label "similarity link source" .
+                      rdfs:domain :GraphemeManifestation ;
+                      rdfs:range :GraphemeManifestation ;
+                      rdfs:label "similarity link source" ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "The source of a similarity link" .
 
 
 ###  http://www.purl.org/graphemon/similarityLinkTarget
 :similarityLinkTarget rdf:type owl:ObjectProperty ;
-                      rdfs:label "similarity link target" .
+                      rdfs:domain :GraphemeManifestation ;
+                      rdfs:range :GraphemeManifestation ;
+                      rdfs:label "similarity link target" ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "The target of a similarity link" .
 
 
 #################################################################
 #    Data properties
 #################################################################
+
+###  http://www.purl.org/graphemon/asSVG
+:asSVG rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf :hasImage ;
+       rdfs:domain cidoc:TXP9_Grapheme ,
+                   :GraphemeAtomicPart ,
+                   :GraphemePart ;
+       rdfs:range :svgLiteral ;
+       rdfs:label "as SVG" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "Defines an RDF representation of a grapheme instance" .
+
 
 ###  http://www.purl.org/graphemon/hasIdentifier
 :hasIdentifier rdf:type owl:DatatypeProperty ;
@@ -168,6 +207,11 @@ lemon:reference rdf:type owl:ObjectProperty ;
                rdfs:range xsd:string ;
                rdfs:label "has identifier" ;
                <http://www.w3.org/2004/02/skos/core#definition> "Relates a Grapheme to a String representation identifiying it in a particular context" .
+
+
+###  http://www.purl.org/graphemon/hasImage
+:hasImage rdf:type owl:DatatypeProperty ;
+          rdfs:label "has image" .
 
 
 ###  http://www.purl.org/graphemon/hasUnicodeCodePoint
@@ -186,6 +230,13 @@ lemon:reference rdf:type owl:ObjectProperty ;
            rdfs:range xsd:boolean ;
            rdfs:label "is damaged" ;
            <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether a glyph is damaged" .
+
+
+###  http://www.purl.org/graphemon/signName
+:signName rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string ;
+          rdfs:label "sign name" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "A designation describing an individual grapheme" .
 
 
 ###  http://www.purl.org/graphemon/similarityLowerBound
