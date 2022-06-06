@@ -78,6 +78,11 @@ lemon:reference rdf:type owl:ObjectProperty ;
                    <http://www.w3.org/2004/02/skos/core#definition> "A property indicating the direction of a grapheme atomic part" .
 
 
+###  http://www.purl.org/graphemon/glyphAspectProperty
+:glyphAspectProperty rdf:type owl:ObjectProperty ;
+                     rdfs:label "glyph aspect property" .
+
+
 ###  http://www.purl.org/graphemon/graphemeEtySource
 :graphemeEtySource rdf:type owl:ObjectProperty ;
                    rdfs:domain :GraphemeEtylink ;
@@ -114,6 +119,7 @@ lemon:reference rdf:type owl:ObjectProperty ;
 
 ###  http://www.purl.org/graphemon/hasColor
 :hasColor rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :glyphAspectProperty ;
           rdfs:domain cidoc:TX6_Glyph ;
           rdfs:label "has color" ;
           <http://www.w3.org/2004/02/skos/core#definition> "Relates a glyph or a glyph part of a color" .
@@ -121,6 +127,7 @@ lemon:reference rdf:type owl:ObjectProperty ;
 
 ###  http://www.purl.org/graphemon/hasMaterial
 :hasMaterial rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :glyphAspectProperty ;
              rdfs:domain cidoc:TX6_Glyph ;
              rdfs:label "has material" ;
              <http://www.w3.org/2004/02/skos/core#definition> "Definition of the material which was used to create a glyph representation" .
@@ -238,6 +245,13 @@ lemon:reference rdf:type owl:ObjectProperty ;
                      rdfs:range xsd:string ;
                      rdfs:label "has unicode code point" ;
                      <http://www.w3.org/2004/02/skos/core#definition> "Relates a grapheme to a unicode code point which identifies it" .
+
+
+###  http://www.purl.org/graphemon/hethzl
+:hethzl rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :hasCuneiformIdentifier ;
+        rdfs:label "hethzl" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Relates to an identifier in the hittite sign dictionary" .
 
 
 ###  http://www.purl.org/graphemon/isDamaged
