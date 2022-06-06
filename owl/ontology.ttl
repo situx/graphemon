@@ -189,6 +189,16 @@ lemon:reference rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
+###  http://www.purl.org/graphemon/abzl
+:abzl rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf :hasCuneiformIdentifier ;
+      rdfs:domain cidoc:TXP9_Grapheme ,
+                  :GraphemeManifestation ;
+      rdfs:range xsd:integer ;
+      rdfs:label "abzl" ;
+      <http://www.w3.org/2004/02/skos/core#definition> "Relates to an identifier in the mesopotamian sign dictionary" .
+
+
 ###  http://www.purl.org/graphemon/asSVG
 :asSVG rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf :hasImage ;
@@ -198,6 +208,13 @@ lemon:reference rdf:type owl:ObjectProperty ;
        rdfs:range :svgLiteral ;
        rdfs:label "as SVG" ;
        <http://www.w3.org/2004/02/skos/core#definition> "Defines an RDF representation of a grapheme instance" .
+
+
+###  http://www.purl.org/graphemon/hasCuneiformIdentifier
+:hasCuneiformIdentifier rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf :hasIdentifier ;
+                        rdfs:label "has cuneiform identifier" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "An identifier which relates to a definition in a cuneiform dictionary or sign list" .
 
 
 ###  http://www.purl.org/graphemon/hasIdentifier
@@ -230,6 +247,16 @@ lemon:reference rdf:type owl:ObjectProperty ;
            rdfs:range xsd:boolean ;
            rdfs:label "is damaged" ;
            <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether a glyph is damaged" .
+
+
+###  http://www.purl.org/graphemon/meszl
+:meszl rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf :hasCuneiformIdentifier ;
+       rdfs:domain cidoc:TXP9_Grapheme ,
+                   :GraphemeManifestation ;
+       rdfs:range xsd:integer ;
+       rdfs:label "meszl" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "Number in the dictionary Mesopotamisches Zeichenlexikon" .
 
 
 ###  http://www.purl.org/graphemon/signName
