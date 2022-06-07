@@ -228,11 +228,33 @@ lemon:reference rdf:type owl:ObjectProperty ;
        <http://www.w3.org/2004/02/skos/core#definition> "Defines an SVG representation of a grapheme instance" .
 
 
+###  http://www.purl.org/graphemon/hasCuneiformGraphemeDescription
+:hasCuneiformGraphemeDescription rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf :hasGraphemeDescription ;
+                                 rdfs:label "has cuneiform grapheme description" ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "A grapheme description for a cuneiform sign" .
+
+
 ###  http://www.purl.org/graphemon/hasCuneiformIdentifier
 :hasCuneiformIdentifier rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :hasIdentifier ;
                         rdfs:label "has cuneiform identifier" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "An identifier which relates to a definition in a cuneiform dictionary or sign list" .
+
+
+###  http://www.purl.org/graphemon/hasGottsteinCode
+:hasGottsteinCode rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasCuneiformGraphemeDescription ;
+                  rdfs:domain :GraphemeVariant ;
+                  rdfs:range :gottsteinLiteral ;
+                  rdfs:label "has Gottstein Code" ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "A Gottstein code description of a cuneiform character" .
+
+
+###  http://www.purl.org/graphemon/hasGraphemeDescription
+:hasGraphemeDescription rdf:type owl:DatatypeProperty ;
+                        rdfs:label "has grapheme description" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "A description of a grapheme in a define character descripton system" .
 
 
 ###  http://www.purl.org/graphemon/hasIdentifier
@@ -247,6 +269,14 @@ lemon:reference rdf:type owl:ObjectProperty ;
 ###  http://www.purl.org/graphemon/hasImage
 :hasImage rdf:type owl:DatatypeProperty ;
           rdfs:label "has image" .
+
+
+###  http://www.purl.org/graphemon/hasPaleoCode
+:hasPaleoCode rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasCuneiformGraphemeDescription ;
+              rdfs:domain :GraphemeVariant ;
+              rdfs:range :paleocodeLiteral ;
+              rdfs:label "has PaleoCode" .
 
 
 ###  http://www.purl.org/graphemon/hasUnicodeCodePoint
