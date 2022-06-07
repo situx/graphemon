@@ -208,6 +208,11 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A cognate between graphemes" .
 
 
+###  http://www.purl.org/graphemon/GraphemeEtylink
+:GraphemeEtylink rdf:type owl:Class ;
+                 rdfs:label "grapheme etylink" .
+
+
 ###  http://www.purl.org/graphemon/GraphemeManifestation
 :GraphemeManifestation rdf:type owl:Class ;
                        rdfs:label "grapheme manifestation" ;
