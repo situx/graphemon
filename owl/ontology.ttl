@@ -23,6 +23,10 @@
 <http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Datatypes
 #################################################################
@@ -364,6 +368,49 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
                                 <http://www.w3.org/2004/02/skos/core#definition> "An undividable part of an egyptian hieroglyphic which is used to compose other hieroglyphics" .
 
 
+###  http://www.purl.org/graphemon/GottsteinSystem
+:GottsteinSystem rdf:type owl:Class ;
+                 rdfs:subClassOf :GraphemeDescriptionSystem ;
+                 rdfs:label "gottstein system encoding" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Gottstein encoding system for cuneiform signs" .
+
+
+###  http://www.purl.org/graphemon/GottsteinWedgeType
+:GottsteinWedgeType rdf:type owl:Class ;
+                    rdfs:subClassOf :GraphemeDescriptionAtomicPart ;
+                    rdfs:label "Gottstein Wedge Type" .
+
+
+###  http://www.purl.org/graphemon/Gottstein_A
+:Gottstein_A rdf:type owl:Class ;
+             rdfs:subClassOf :GottsteinWedgeType ;
+             rdfs:label "Gottstein Wedge Type A" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Wedge Type A as defined by the Gottstein system" ;
+             <http://www.w3.org/2004/02/skos/core#note> "Vertical wedge" .
+
+
+###  http://www.purl.org/graphemon/Gottstein_B
+:Gottstein_B rdf:type owl:Class ;
+             rdfs:subClassOf :GottsteinWedgeType ;
+             rdfs:label "Gottstein Wedge Type B" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Wedge Type B as defined by the Gottstein system" ;
+             <http://www.w3.org/2004/02/skos/core#note> "Horizontal wedge" .
+
+
+###  http://www.purl.org/graphemon/Gottstein_C
+:Gottstein_C rdf:type owl:Class ;
+             rdfs:subClassOf :GottsteinWedgeType ;
+             rdfs:label "Gottstein Wedge Type C" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Wedge Type C as defined by the Gottstein system" .
+
+
+###  http://www.purl.org/graphemon/Gottstein_Wedget_Type_D
+:Gottstein_Wedget_Type_D rdf:type owl:Class ;
+                         rdfs:subClassOf :GottsteinWedgeType ;
+                         rdfs:label "Gottstein Wedge Type D" ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "Wedge Type D as defined by the Gottstein system" .
+
+
 ###  http://www.purl.org/graphemon/GraphemeAtomicPart
 :GraphemeAtomicPart rdf:type owl:Class ;
                     rdfs:subClassOf :GraphemePart ;
@@ -376,6 +423,17 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
 :GraphemeCognate rdf:type owl:Class ;
                  rdfs:label "grapheme cognate" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A cognate between graphemes" .
+
+
+###  http://www.purl.org/graphemon/GraphemeDescriptionAtomicPart
+:GraphemeDescriptionAtomicPart rdf:type owl:Class ;
+                               rdfs:label "grapheme description atomic part" .
+
+
+###  http://www.purl.org/graphemon/GraphemeDescriptionSystem
+:GraphemeDescriptionSystem rdf:type owl:Class ;
+                           rdfs:label "grapheme description system" ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "A description system to describe features of graphemes" .
 
 
 ###  http://www.purl.org/graphemon/GraphemeEtylink
@@ -445,6 +503,77 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
                  rdfs:subClassOf :Stroketyped ;
                  rdfs:label "Ogham sign stroke" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "Stroke as a central component of the signs of the Ogham language" .
+
+
+###  http://www.purl.org/graphemon/PaleoCodageDescriptionAtomicPart
+:PaleoCodageDescriptionAtomicPart rdf:type owl:Class ;
+                                  rdfs:subClassOf :GraphemeDescriptionAtomicPart ;
+                                  rdfs:label "PaleoCodage Wedge Type" .
+
+
+###  http://www.purl.org/graphemon/PaleoCodageEncoding
+:PaleoCodageEncoding rdf:type owl:Class ;
+                     rdfs:subClassOf :GraphemeDescriptionSystem ;
+                     rdfs:label "PaleoCodage encoding" ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "PaleoCodage encoding system for cuneiform signs" .
+
+
+###  http://www.purl.org/graphemon/PaleoCode_A
+:PaleoCode_A rdf:type owl:Class ;
+             rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
+             rdfs:label "PaleoCodage Wedge Type A" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Wedge Type A as defined by the PaleoCodage encoding system" ;
+             <http://www.w3.org/2004/02/skos/core#note> "Vertical wedge" .
+
+
+###  http://www.purl.org/graphemon/PaleoCode_B
+:PaleoCode_B rdf:type owl:Class ;
+             rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
+             rdfs:label "PaleoCodage Wedge Type B" ;
+             <http://www.w3.org/2004/02/skos/core#note> "Horizontal wedge" .
+
+
+###  http://www.purl.org/graphemon/PaleoCode_C
+:PaleoCode_C rdf:type owl:Class ;
+             rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
+             rdfs:label "PaleoCodage Wedge Type C" .
+
+
+###  http://www.purl.org/graphemon/PaleoCode_D
+:PaleoCode_D rdf:type owl:Class ;
+             rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
+             rdfs:label "PaleoCodage Wedge Type D" .
+
+
+###  http://www.purl.org/graphemon/PaleoCode_E
+:PaleoCode_E rdf:type owl:Class ;
+             rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
+             rdfs:label "PaleoCodage Wedge Type E" .
+
+
+###  http://www.purl.org/graphemon/PaleoCode_F
+:PaleoCode_F rdf:type owl:Class ;
+             rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
+             rdfs:label "PaleoCodage Wedge Type F" .
+
+
+###  http://www.purl.org/graphemon/PaleoCode_W
+:PaleoCode_W rdf:type owl:Class ;
+             rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
+             rdfs:label "PaleoCodage Wedge Type W" ;
+             <http://www.w3.org/2004/02/skos/core#note> "Winkelhaken wedge" .
+
+
+###  http://www.purl.org/graphemon/PaleoCode_X
+:PaleoCode_X rdf:type owl:Class ;
+             rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
+             rdfs:label "PaleoCodage Wedge Type X" .
+
+
+###  http://www.purl.org/graphemon/PaleoCode_Y
+:PaleoCode_Y rdf:type owl:Class ;
+             rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
+             rdfs:label "PaleoCodage Wedge Type Y" .
 
 
 ###  http://www.purl.org/graphemon/SimilarityLink
