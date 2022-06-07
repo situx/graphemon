@@ -1,0 +1,102 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.co-ode.org/ontologies/ont.owl#abzl
+<http://www.co-ode.org/ontologies/ont.owl#abzl> rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf <http://www.purl.org/graphemon/hasCuneiformIdentifier> ;
+                                                rdfs:label "abzl" ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Relates to an identifier in the old babylonian sign dictionary" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hethzl
+<http://www.co-ode.org/ontologies/ont.owl#hethzl> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:subPropertyOf <http://www.purl.org/graphemon/hasCuneiformIdentifier> ;
+                                                  rdfs:label "hethzl" ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "Relates to an identifier in the old babylonian sign dictionary" .
+
+
+###  http://www.purl.org/graphemon/hasCuneiformIdentifier
+<http://www.purl.org/graphemon/hasCuneiformIdentifier> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:subPropertyOf <http://www.purl.org/graphemon/hasIdentifier> ;
+                                                       rdfs:label "has cuneiform identifier" .
+
+
+###  http://www.purl.org/graphemon/hasIdentifier
+<http://www.purl.org/graphemon/hasIdentifier> rdf:type owl:DatatypeProperty ;
+                                              rdfs:label "has identifier" .
+
+
+###  http://www.purl.org/graphemon/hasUnicodeCodePoint
+<http://www.purl.org/graphemon/hasUnicodeCodePoint> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:label "has unicode code point" .
+
+
+###  http://www.purl.org/graphemon/meszl
+<http://www.purl.org/graphemon/meszl> rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf <http://www.purl.org/graphemon/hasCuneiformIdentifier> ;
+                                      rdfs:label "meszl" ;
+                                      <http://www.w3.org/2004/02/skos/core#definition> "Relates to an identifier in the mesopotamian sign dictionary" .
+
+
+###  http://www.purl.org/graphemon/signName
+<http://www.purl.org/graphemon/signName> rdf:type owl:DatatypeProperty ;
+                                         rdfs:range xsd:string ;
+                                         rdfs:label "sign name" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme
+<http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme> rdf:type owl:Class ;
+                                                   rdfs:label "grapheme" .
+
+
+###  http://www.purl.org/graphemon/GraphemeVariant
+<http://www.purl.org/graphemon/GraphemeVariant> rdf:type owl:Class ;
+                                                rdfs:label "grapheme variant" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.co-ode.org/ontologies/ont.owl#a_grapheme
+<http://www.co-ode.org/ontologies/ont.owl#a_grapheme> rdf:type owl:NamedIndividual ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme> ;
+                                                      <http://www.co-ode.org/ontologies/ont.owl#abzl> 470 ;
+                                                      <http://www.co-ode.org/ontologies/ont.owl#hethzl> 364 ,
+                                                                                                        365 ;
+                                                      <http://www.purl.org/graphemon/hasUnicodeCodePoint> "U+12000" ;
+                                                      <http://www.purl.org/graphemon/meszl> 839 ;
+                                                      <http://www.purl.org/graphemon/signName> "A" ;
+                                                      rdfs:label "Grapheme a" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1
+<http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.purl.org/graphemon/GraphemeVariant> ;
+                                                           rdfs:label "Grapheme a variant 1" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
