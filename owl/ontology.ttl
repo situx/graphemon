@@ -210,6 +210,13 @@ lemon:reference rdf:type owl:ObjectProperty ;
       <http://www.w3.org/2004/02/skos/core#definition> "Relates to an identifier in the mesopotamian sign dictionary" .
 
 
+###  http://www.purl.org/graphemon/asPNG
+:asPNG rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf :hasImage ;
+       rdfs:label "as PNG" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "Defines an PNG representation of a grapheme instance" .
+
+
 ###  http://www.purl.org/graphemon/asSVG
 :asSVG rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf :hasImage ;
@@ -218,7 +225,7 @@ lemon:reference rdf:type owl:ObjectProperty ;
                    :GraphemePart ;
        rdfs:range :svgLiteral ;
        rdfs:label "as SVG" ;
-       <http://www.w3.org/2004/02/skos/core#definition> "Defines an RDF representation of a grapheme instance" .
+       <http://www.w3.org/2004/02/skos/core#definition> "Defines an SVG representation of a grapheme instance" .
 
 
 ###  http://www.purl.org/graphemon/hasCuneiformIdentifier
@@ -244,6 +251,7 @@ lemon:reference rdf:type owl:ObjectProperty ;
 
 ###  http://www.purl.org/graphemon/hasUnicodeCodePoint
 :hasUnicodeCodePoint rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasIdentifier ;
                      rdfs:domain cidoc:TXP9_Grapheme ,
                                  :GraphemeVariant ;
                      rdfs:range xsd:string ;
@@ -258,6 +266,14 @@ lemon:reference rdf:type owl:ObjectProperty ;
         <http://www.w3.org/2004/02/skos/core#definition> "Relates to an identifier in the hittite sign dictionary" .
 
 
+###  http://www.purl.org/graphemon/isCanonicalForm
+:isCanonicalForm rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :GraphemeVariant ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:label "is canonical form" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether a grapheme variant is considered as a canonical form" .
+
+
 ###  http://www.purl.org/graphemon/isDamaged
 :isDamaged rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf owl:topDataProperty ;
@@ -265,6 +281,14 @@ lemon:reference rdf:type owl:ObjectProperty ;
            rdfs:range xsd:boolean ;
            rdfs:label "is damaged" ;
            <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether a glyph is damaged" .
+
+
+###  http://www.purl.org/graphemon/isErased
+:isErased rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:range xsd:boolean ;
+          rdfs:label "is erased" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether a glyph representation is erased" .
 
 
 ###  http://www.purl.org/graphemon/meszl
@@ -279,6 +303,7 @@ lemon:reference rdf:type owl:ObjectProperty ;
 
 ###  http://www.purl.org/graphemon/signName
 :signName rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :hasCuneiformIdentifier ;
           rdfs:range xsd:string ;
           rdfs:label "sign name" ;
           <http://www.w3.org/2004/02/skos/core#definition> "A designation describing an individual grapheme" .
@@ -295,6 +320,13 @@ lemon:reference rdf:type owl:ObjectProperty ;
 :similarityUpperBound rdf:type owl:DatatypeProperty ;
                       rdfs:label "similarity upper bound" ;
                       <http://www.w3.org/2004/02/skos/core#definition> "The upper bound of a similarity measurement" .
+
+
+###  http://www.purl.org/graphemon/slha
+:slha rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf :hasCuneiformIdentifier ;
+      rdfs:label "slha" ;
+      <http://www.w3.org/2004/02/skos/core#definition> "Deimel number of the Sumerian lexicon (SL) or number from the Handbuch Assur (HA)" .
 
 
 ###  http://www.purl.org/graphemon/upperBoundMostSimilar
@@ -371,7 +403,7 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
 ###  http://www.purl.org/graphemon/GottsteinSystem
 :GottsteinSystem rdf:type owl:Class ;
                  rdfs:subClassOf :GraphemeDescriptionSystem ;
-                 rdfs:label "gottstein system encoding" ;
+                 rdfs:label "Gottstein system encoding" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "Gottstein encoding system for cuneiform signs" .
 
 
