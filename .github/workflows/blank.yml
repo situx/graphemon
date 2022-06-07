@@ -20,6 +20,7 @@ jobs:
          sudo pip3 install wheel pylode==2.13.2 rdflib
          cd docs
          pylode -i ../owl/ontology.ttl -o graphemeontology.html
+         pylode -i ../examples/cuneiform_a_example.ttl -o cuneiform_a_example.html
          cp ../index.html .
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
