@@ -5,7 +5,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://www.w3.org/2002/07/owl#> .
 
-[ rdf:type owl:Ontology
+[ rdf:type owl:Ontology ;
+   rdfs:label "Grapheme example"
  ] .
 
 #################################################################
