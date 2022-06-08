@@ -27,11 +27,21 @@
                                                 <http://www.w3.org/2004/02/skos/core#definition> "Relates to an identifier in the old babylonian sign dictionary" .
 
 
+###  http://www.co-ode.org/ontologies/ont.owl#hasUnicodeRepresentation
+<http://www.co-ode.org/ontologies/ont.owl#hasUnicodeRepresentation> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:label "has Unicode representation" .
+
+
 ###  http://www.co-ode.org/ontologies/ont.owl#hethzl
 <http://www.co-ode.org/ontologies/ont.owl#hethzl> rdf:type owl:DatatypeProperty ;
                                                   rdfs:subPropertyOf <http://www.purl.org/graphemon/hasCuneiformIdentifier> ;
                                                   rdfs:label "hethzl" ;
                                                   <http://www.w3.org/2004/02/skos/core#definition> "Relates to an identifier in the old babylonian sign dictionary" .
+
+
+###  http://www.purl.org/graphemon/asSVG
+<http://www.purl.org/graphemon/asSVG> rdf:type owl:DatatypeProperty ;
+                                      rdfs:label "as SVG" .
 
 
 ###  http://www.purl.org/graphemon/hasCuneiformIdentifier
@@ -91,10 +101,19 @@
 #    Individuals
 #################################################################
 
+###  http://www.co-ode.org/ontologies/ont.owl#AxA_grapheme
+<http://www.co-ode.org/ontologies/ont.owl#AxA_grapheme> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme> ;
+                                                        <http://www.co-ode.org/ontologies/ont.owl#hasUnicodeRepresentation> "𒀁" ;
+                                                        <http://www.purl.org/graphemon/hasUnicodeCodePoint> "U+12001" ;
+                                                        rdfs:label "AxA grapheme" .
+
+
 ###  http://www.co-ode.org/ontologies/ont.owl#a_grapheme
 <http://www.co-ode.org/ontologies/ont.owl#a_grapheme> rdf:type owl:NamedIndividual ,
                                                                <http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme> ;
                                                       <http://www.co-ode.org/ontologies/ont.owl#abzl> 470 ;
+                                                      <http://www.co-ode.org/ontologies/ont.owl#hasUnicodeRepresentation> "𒀀" ;
                                                       <http://www.co-ode.org/ontologies/ont.owl#hethzl> 364 ,
                                                                                                         365 ;
                                                       <http://www.purl.org/graphemon/hasUnicodeCodePoint> "U+12000" ;
@@ -103,9 +122,19 @@
                                                       rdfs:label "Grapheme a" .
 
 
+###  http://www.co-ode.org/ontologies/ont.owl#grapheme_AxA_var1
+<http://www.co-ode.org/ontologies/ont.owl#grapheme_AxA_var1> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.purl.org/graphemon/GraphemeVariant> ;
+                                                             <http://www.purl.org/graphemon/asSVG> "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"170\" height=\"80\"><defs></defs><g><path fill=\"#000000\" stroke=\"#000000\" paint-order=\"fill stroke markers\" d=\" M 25 20 L 35 20 L 30 30 L 25 20 M 30 30 L 30 60 M 35 27 L 45 27 L 40 37 L 35 27 M 40 37 L 40 52 M 45 27 L 55 27 L 50 37 L 45 27 M 50 37 L 50 52 M 45 34 L 55 34 L 50 44 L 45 34 M 50 44 L 50 59 M 55 20 L 65 20 L 60 30 L 55 20 M 60 30 L 60 60 M 55 27 L 65 27 L 60 37 L 55 27 M 60 37 L 60 67\" stroke-miterlimit=\"10\" stroke-dasharray=\"\"></path></g></svg>" ;
+                                                             <http://www.purl.org/graphemon/hasGottsteinCode> "a6" ;
+                                                             <http://www.purl.org/graphemon/hasPaleoCode> "a-:sa-:sa:sa-a:a" ;
+                                                             rdfs:label "Grapheme AxA variant 1" .
+
+
 ###  http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1
 <http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1> rdf:type owl:NamedIndividual ,
                                                                     <http://www.purl.org/graphemon/GraphemeVariant> ;
+                                                           <http://www.purl.org/graphemon/asSVG> "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"170\" height=\"80\"><defs></defs><g><path fill=\"#000000\" stroke=\"#000000\" paint-order=\"fill stroke markers\" d=\" M 25 20 L 35 20 L 30 30 L 25 20 M 30 30 L 30 60 M 35 20 L 45 20 L 40 30 L 35 20 M 40 30 L 40 60 M 35 27 L 45 27 L 40 37 L 35 27 M 40 37 L 40 67\" stroke-miterlimit=\"10\" stroke-dasharray=\"\"></path></g></svg>" ;
                                                            <http://www.purl.org/graphemon/hasGottsteinCode> "a3" ;
                                                            <http://www.purl.org/graphemon/hasPaleoCode> "a-a:a" ;
                                                            rdfs:label "Grapheme a variant 1" .
@@ -122,7 +151,19 @@
 ###  http://www.co-ode.org/ontologies/ont.owl#2(disz)_grapheme
 <http://www.co-ode.org/ontologies/ont.owl#2(disz)_grapheme> rdf:type owl:NamedIndividual ,
                                                                      <http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme> ;
+                                                            <http://www.co-ode.org/ontologies/ont.owl#hasUnicodeRepresentation> "𒈫" ;
+                                                            <http://www.purl.org/graphemon/hasUnicodeCodePoint> "U+1222B" ;
+                                                            <http://www.purl.org/graphemon/meszl> 825 ;
+                                                            <http://www.purl.org/graphemon/signName> "MIN" ;
                                                             rdfs:label "Grapheme 2(disz)" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#grapheme_2(disz)_var1
+<http://www.co-ode.org/ontologies/ont.owl#grapheme_2(disz)_var1> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.purl.org/graphemon/GraphemeVariant> ;
+                                                                 <http://www.purl.org/graphemon/hasGottsteinCode> "a2" ;
+                                                                 <http://www.purl.org/graphemon/hasPaleoCode> "a-a" ;
+                                                                 rdfs:label "Grapheme 2(disz) variant 1" .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

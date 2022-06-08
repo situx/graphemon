@@ -289,6 +289,14 @@ lemon:reference rdf:type owl:ObjectProperty ;
                      <http://www.w3.org/2004/02/skos/core#definition> "Relates a grapheme to a unicode code point which identifies it" .
 
 
+###  http://www.purl.org/graphemon/hasUnicodeRepresentation
+:hasUnicodeRepresentation rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :hasIdentifier ;
+                          rdfs:domain :GraphemeManifestation ;
+                          rdfs:range xsd:string ;
+                          rdfs:label "has unicode repesentation" .
+
+
 ###  http://www.purl.org/graphemon/hethzl
 :hethzl rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf :hasCuneiformIdentifier ;
