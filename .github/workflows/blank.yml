@@ -17,10 +17,10 @@ jobs:
          sudo apt-get install python-dev python3-pip -y
          sudo apt-get install doxygen graphviz -y
          sudo apt-get install python3-dev python3-pip python3-venv python3-wheel -y
-         sudo pip3 install wheel pylode rdflib
+         sudo pip3 install wheel pylode==2.13.2 rdflib
          cd docs
-         pylode -o graphemeontology.html ../owl/ontology.ttl
-         pylode -o cuneiform_a_example.html ../examples/cuneiform_a_example.ttl
+         pylode -i ../owl/ontology.ttl -o graphemeontology.html
+         pylode -i ../examples/cuneiform_a_example.ttl -o cuneiform_a_example.html
          cp ../index.html .
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
