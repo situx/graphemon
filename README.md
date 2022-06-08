@@ -1,6 +1,7 @@
 # Graphemon - Grapheme Model for ontologies
 This repository contains a complimentary ontology model to the Ontolex-Lemon model for dictionaries.
 Its goal is the representation of grpahemes and grapheme variants and the connection of these variants to actual representations of graphemes, e.g. glyphs on given mediums.
+Documentation: https://situx.github.io/graphemon/
 
 # Foundations
 To explain the core of the ontology model, the following fundamental concepts should be explored:
@@ -25,6 +26,14 @@ The nature of these definitions need to be adjusted by language, possibly be ind
 # Graphemon Ontology Model
 
 ## Representation of grapheme variants
+Grapheme variants might be representated in the following different ways:
+* Using a description model for graphemes for a particular script (e.g. PaleoCodage, Gottstein, Chinese Character Description Language)
+* Using an image representation for a particular script (e.g. SVG)
+* Using related representations such as a 3D volume of a written grapheme
+
+A description in at least two of the aforementioned representations allows for the calculation of similarities between grapheme variants and their expression in RDF.
+
+For grapheme description models: These may also be expressed directly in RDF triples.
 
 ## GraphemeVariant Etymology
 
@@ -44,7 +53,12 @@ Results of these similarity calculations can be added as relations in the ontolo
 
 # Usage examples of the ontology model
 
-## Cuneiform word "A"
+## Representation example: Cuneiform word "A" vs. Cuneiform word 2(disz)
+
+The cuneiform word "A", with a sense of water consists of exactly one grapheme, "A", which may be depicted in at least two grapheme variants which may occur as glyph instances on certain cuneiform tablets.
+Using the ontology model, these relations can be described.
+
+## Relationship between Graphemes: Cuneiform Grapheme "A" is part of Grapheme AxA
 
 # Application of the ontology model
 
