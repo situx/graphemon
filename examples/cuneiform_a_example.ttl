@@ -94,6 +94,16 @@ lemon:writtenRep rdf:type owl:DatatypeProperty ;
                                                 <http://www.w3.org/2004/02/skos/core#definition> "Relates to an identifier in the old babylonian sign dictionary" .
 
 
+###  http://www.co-ode.org/ontologies/ont.owl#charindex
+<http://www.co-ode.org/ontologies/ont.owl#charindex> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:label "character index" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#columnNumber
+<http://www.co-ode.org/ontologies/ont.owl#columnNumber> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:label "column number" .
+
+
 ###  http://www.co-ode.org/ontologies/ont.owl#hasUnicodeRepresentation
 <http://www.co-ode.org/ontologies/ont.owl#hasUnicodeRepresentation> rdf:type owl:DatatypeProperty ;
                                                                     rdfs:label "has Unicode representation" .
@@ -104,6 +114,16 @@ lemon:writtenRep rdf:type owl:DatatypeProperty ;
                                                   rdfs:subPropertyOf <http://www.purl.org/graphemon/hasCuneiformIdentifier> ;
                                                   rdfs:label "hethzl" ;
                                                   <http://www.w3.org/2004/02/skos/core#definition> "Relates to an identifier in the old babylonian sign dictionary" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#lineNumber
+<http://www.co-ode.org/ontologies/ont.owl#lineNumber> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:label "line number" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#wedgeIndex
+<http://www.co-ode.org/ontologies/ont.owl#wedgeIndex> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:label "wedge index" .
 
 
 ###  http://www.purl.org/graphemon/asSVG
@@ -199,6 +219,10 @@ lemon:WordForm rdf:type owl:Class ;
 ###  http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme
 <http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme> rdf:type owl:Class ;
                                                    rdfs:label "grapheme" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#CuneiformWedgeRendering
+<http://www.co-ode.org/ontologies/ont.owl#CuneiformWedgeRendering> rdf:type owl:Class .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#Paleocode_A
@@ -307,13 +331,29 @@ lemon:WordForm rdf:type owl:Class ;
 ###  http://www.co-ode.org/ontologies/ont.owl#a_25_1_4_4_HS_799_03_front
 <http://www.co-ode.org/ontologies/ont.owl#a_25_1_4_4_HS_799_03_front> rdf:type owl:NamedIndividual ,
                                                                                <http://www.cidoc-crm.org/cidoc-crm/TXP4_Glyph> ;
+                                                                      <http://www.co-ode.org/ontologies/ont.owl#charindex> 4 ;
+                                                                      <http://www.co-ode.org/ontologies/ont.owl#columnNumber> 1 ;
+                                                                      <http://www.co-ode.org/ontologies/ont.owl#lineNumber> 4 ;
                                                                       rdfs:label "Glyph on clay tablet HS 799 front side, column 1, line 4, character index 4" .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#a_50_1_3_7_HS_306_03_front
 <http://www.co-ode.org/ontologies/ont.owl#a_50_1_3_7_HS_306_03_front> rdf:type owl:NamedIndividual ,
                                                                                <http://www.cidoc-crm.org/cidoc-crm/TXP4_Glyph> ;
+                                                                      <http://www.co-ode.org/ontologies/ont.owl#charindex> 7 ;
+                                                                      <http://www.co-ode.org/ontologies/ont.owl#columnNumber> 1 ;
+                                                                      <http://www.co-ode.org/ontologies/ont.owl#lineNumber> 3 ;
                                                                       rdfs:label "Glyph on clay tablet HS 306 front side, column 1, line 3, character index 7" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#a_50_1_3_7_HS_306_03_front_wedge1
+<http://www.co-ode.org/ontologies/ont.owl#a_50_1_3_7_HS_306_03_front_wedge1> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.co-ode.org/ontologies/ont.owl#CuneiformWedgeRendering> ;
+                                                                             <http://www.co-ode.org/ontologies/ont.owl#charindex> 7 ;
+                                                                             <http://www.co-ode.org/ontologies/ont.owl#columnNumber> 1 ;
+                                                                             <http://www.co-ode.org/ontologies/ont.owl#lineNumber> 3 ;
+                                                                             <http://www.co-ode.org/ontologies/ont.owl#wedgeIndex> 1 ;
+                                                                             rdfs:label "Cuneiform Wedge 1 on clay tablet HS 306 front side, column 1, line 3, character index 7" .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#a_grapheme
@@ -356,6 +396,7 @@ lemon:WordForm rdf:type owl:Class ;
 <http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at1> rdf:type owl:NamedIndividual ,
                                                                         <http://www.co-ode.org/ontologies/ont.owl#Paleocode_A> ,
                                                                         <http://www.purl.org/graphemon/CuneiformWedge> ;
+                                                               <http://www.cidoc-crm.org/cidoc-crm/P56_is_rendered_by> <http://www.co-ode.org/ontologies/ont.owl#a_50_1_3_7_HS_306_03_front_wedge1> ;
                                                                <http://www.purl.org/graphemon/leftOf> <http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at2> ;
                                                                rdfs:label "Grapheme a variant 1 atomic part 1" .
 
