@@ -192,7 +192,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
     <script type="application/ld+json">
       [
   {
-    "@id": "n9a6b8a2e2b1546fd82e0778c0195c384b1",
+    "@id": "n56b54f8d107e4c9d97fbf7fcf09dc75ab1",
     "@type": [
       "https://schema.org/DefinedTermSet"
     ],
@@ -215,7 +215,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
     <h2 style="display:none;">Metadata</h2>
     <dl>
         <dt>URI</dt>
-        <dd><code>n9a6b8a2e2b1546fd82e0778c0195c384b1</code></dd>
+        <dd><code>n56b54f8d107e4c9d97fbf7fcf09dc75ab1</code></dd>
         <dt>Ontology RDF</dt>
         <dd><a href="cuneiform_a_example.ttl">RDF (turtle)</a></dd>
     </dl>
@@ -224,6 +224,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
     <h2>Table of Contents</h2>
     <ol>
         <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
         <li><a href="#datatypeproperties">Datatype Properties</a></li>
         <li><a href="#annotationproperties">Annotation Properties</a></li>
         <li><a href="#namedindividuals">Named Individuals</a></li>
@@ -241,9 +242,168 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
   <section id="classes">
     <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
+      <li><a href="http://lemon-model.net/lemon#LexicalEntity">lemon:LexicalEntity</a></li>
+      <li><a href="http://lemon-model.net/lemon#LexicalForm">lemon:LexicalForm</a></li>
+      <li><a href="http://lemon-model.net/lemon#LexicalSense">lemon:LexicalSense</a></li>
+      <li><a href="http://lemon-model.net/lemon#Lexicon">lemon:Lexicon</a></li>
+      <li><a href="http://lemon-model.net/lemon#Word">lemon:Word</a></li>
+      <li><a href="http://lemon-model.net/lemon#WordForm">lemon:WordForm</a></li>
+      <li><a href="http://www.cidoc-crm.org/cidoc-crm/TXP4_Glyph">crm:TXP4_Glyph</a></li>
       <li><a href="http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme">crm:TXP9_Grapheme</a></li>
+      <li><a href="http://www.co-ode.org/ontologies/ont.owl#Paleocode_A">http://www.co-ode.org/ontologies/ont.owl#Paleocode_A</a></li>
+      <li><a href="http://www.purl.org/graphemon/CuneiformWedge">http://www.purl.org/graphemon/CuneiformWedge</a></li>
+      <li><a href="http://www.purl.org/graphemon/GottsteinDescriptionAtomicPart">http://www.purl.org/graphemon/GottsteinDescriptionAtomicPart</a></li>
+      <li><a href="http://www.purl.org/graphemon/GraphemeAtomicPart">http://www.purl.org/graphemon/GraphemeAtomicPart</a></li>
+      <li><a href="http://www.purl.org/graphemon/GraphemeDescriptionAtomicPart">http://www.purl.org/graphemon/GraphemeDescriptionAtomicPart</a></li>
+      <li><a href="http://www.purl.org/graphemon/GraphemeSense">http://www.purl.org/graphemon/GraphemeSense</a></li>
       <li><a href="http://www.purl.org/graphemon/GraphemeVariant">http://www.purl.org/graphemon/GraphemeVariant</a></li>
+      <li><a href="http://www.purl.org/graphemon/PaleoCodageDescriptionAtomicPart">http://www.purl.org/graphemon/PaleoCodageDescriptionAtomicPart</a></li>
+      <li><a href="http://www.purl.org/graphemon/Stroketyped">http://www.purl.org/graphemon/Stroketyped</a></li>
+      <li><a href="http://www.purl.org/graphemon/WordFormOccurrence">http://www.purl.org/graphemon/WordFormOccurrence</a></li>
     </ul>
+    <div class="entity class" id="lexicalentity">
+        <h3>
+          lexical entity<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#lexicalentity" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://lemon-model.net/lemon#LexicalEntity</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://lemon-model.net/lemon#Word">lemon:Word</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="lexicalform">
+        <h3>
+          lexical form<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#lexicalform" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://lemon-model.net/lemon#LexicalForm</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://lemon-model.net/lemon#WordForm">lemon:WordForm</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="lexicalsense">
+        <h3>
+          lexical sense<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#lexicalsense" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://lemon-model.net/lemon#LexicalSense</code></td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#word_a_sense">http://www.co-ode.org/ontologies/ont.owl#word_a_sense</a><br/>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#word_mu_sense">http://www.co-ode.org/ontologies/ont.owl#word_mu_sense</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="lexicon">
+        <h3>
+          lexicon<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#lexicon" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://lemon-model.net/lemon#Lexicon</code></td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#Sumerian_lexicon">http://www.co-ode.org/ontologies/ont.owl#Sumerian_lexicon</a><br/>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#AkkadianLexicon">http://www.co-ode.org/ontologies/ont.owl#AkkadianLexicon</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="word">
+        <h3>
+          word<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#word" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://lemon-model.net/lemon#Word</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://lemon-model.net/lemon#LexicalEntity">lemon:LexicalEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#word_mu">http://www.co-ode.org/ontologies/ont.owl#word_mu</a><br/>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#word_a">http://www.co-ode.org/ontologies/ont.owl#word_a</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="wordform">
+        <h3>
+          word form<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#wordform" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://lemon-model.net/lemon#WordForm</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://lemon-model.net/lemon#LexicalForm">lemon:LexicalForm</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#word_mu_form1">http://www.co-ode.org/ontologies/ont.owl#word_mu_form1</a><br/>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#word_a_form">http://www.co-ode.org/ontologies/ont.owl#word_a_form</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="glyph">
+        <h3>
+          glyph<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#glyph" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.cidoc-crm.org/cidoc-crm/TXP4_Glyph</code></td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#a_50_1_3_7_HS_306_03_front">http://www.co-ode.org/ontologies/ont.owl#a_50_1_3_7_HS_306_03_front</a><br/>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#a_25_1_4_4_HS_799_03_front">http://www.co-ode.org/ontologies/ont.owl#a_25_1_4_4_HS_799_03_front</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity class" id="grapheme">
         <h3>
           grapheme<sup title="class" class="sup-c">c</sup>
@@ -257,9 +417,138 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Members</th>
                 <td>
-                    <a href="http://www.co-ode.org/ontologies/ont.owl#a_grapheme">http://www.co-ode.org/ontologies/ont.owl#a_grapheme</a><br/>
                     <a href="http://www.co-ode.org/ontologies/ont.owl#AxA_grapheme">http://www.co-ode.org/ontologies/ont.owl#AxA_grapheme</a><br/>
                     <a href="http://www.co-ode.org/ontologies/ont.owl#2(disz)_grapheme">http://www.co-ode.org/ontologies/ont.owl#2(disz)_grapheme</a><br/>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#a_grapheme">http://www.co-ode.org/ontologies/ont.owl#a_grapheme</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="PaleoCodageWedgeTypeA">
+        <h3>
+          PaleoCodage Wedge Type A<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#PaleoCodageWedgeTypeA" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.co-ode.org/ontologies/ont.owl#Paleocode_A</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.purl.org/graphemon/PaleoCodageDescriptionAtomicPart">http://www.purl.org/graphemon/PaleoCodageDescriptionAtomicPart</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at3">http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at3</a><br/>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2_at2">http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2_at2</a><br/>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at2">http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at2</a><br/>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2_at1">http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2_at1</a><br/>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at1">http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at1</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="cuneiformwedge">
+        <h3>
+          cuneiform wedge<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#cuneiformwedge" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/CuneiformWedge</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.purl.org/graphemon/Stroketyped">http://www.purl.org/graphemon/Stroketyped</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at3">http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at3</a><br/>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2_at2">http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2_at2</a><br/>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at2">http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at2</a><br/>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2_at1">http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2_at1</a><br/>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at1">http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at1</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Gottsteindescriptionatomicpart">
+        <h3>
+          Gottstein description atomic part<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Gottsteindescriptionatomicpart" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/GottsteinDescriptionAtomicPart</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.purl.org/graphemon/GraphemeDescriptionAtomicPart">http://www.purl.org/graphemon/GraphemeDescriptionAtomicPart</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="graphemeatomicpart">
+        <h3>
+          grapheme atomic part<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#graphemeatomicpart" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/GraphemeAtomicPart</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://www.purl.org/graphemon/Stroketyped">http://www.purl.org/graphemon/Stroketyped</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="graphemedescriptionatomicpart">
+        <h3>
+          grapheme description atomic part<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#graphemedescriptionatomicpart" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/GraphemeDescriptionAtomicPart</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://www.purl.org/graphemon/GottsteinDescriptionAtomicPart">http://www.purl.org/graphemon/GottsteinDescriptionAtomicPart</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.purl.org/graphemon/PaleoCodageDescriptionAtomicPart">http://www.purl.org/graphemon/PaleoCodageDescriptionAtomicPart</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="graphemesense">
+        <h3>
+          grapheme sense<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#graphemesense" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/GraphemeSense</code></td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#Grapheme_a_sense">http://www.co-ode.org/ontologies/ont.owl#Grapheme_a_sense</a><br/>
                 </td>
             </tr>
         </table>
@@ -277,22 +566,218 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Members</th>
                 <td>
-                    <a href="http://www.co-ode.org/ontologies/ont.owl#grapheme_2(disz)_var1">http://www.co-ode.org/ontologies/ont.owl#grapheme_2(disz)_var1</a><br/>
                     <a href="http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1">http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1</a><br/>
                     <a href="http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2">http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2</a><br/>
                     <a href="http://www.co-ode.org/ontologies/ont.owl#grapheme_AxA_var1">http://www.co-ode.org/ontologies/ont.owl#grapheme_AxA_var1</a><br/>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#grapheme_2(disz)_var1">http://www.co-ode.org/ontologies/ont.owl#grapheme_2(disz)_var1</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="PaleoCodagedescriptionatomicpart">
+        <h3>
+          PaleoCodage description atomic part<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#PaleoCodagedescriptionatomicpart" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/PaleoCodageDescriptionAtomicPart</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.purl.org/graphemon/GraphemeDescriptionAtomicPart">http://www.purl.org/graphemon/GraphemeDescriptionAtomicPart</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#Paleocode_A">http://www.co-ode.org/ontologies/ont.owl#Paleocode_A</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="stroketyped">
+        <h3>
+          stroke typed<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#stroketyped" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/Stroketyped</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.purl.org/graphemon/GraphemeAtomicPart">http://www.purl.org/graphemon/GraphemeAtomicPart</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://www.purl.org/graphemon/CuneiformWedge">http://www.purl.org/graphemon/CuneiformWedge</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="wordformoccurence">
+        <h3>
+          word form occurence<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#wordformoccurence" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/WordFormOccurrence</code></td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#Word_a_form1_occurrence1">http://www.co-ode.org/ontologies/ont.owl#Word_a_form1_occurrence1</a><br/>
+                    <a href="http://www.co-ode.org/ontologies/ont.owl#Word_mu_form1_occurence1">http://www.co-ode.org/ontologies/ont.owl#Word_mu_form1_occurence1</a><br/>
                 </td>
             </tr>
         </table>
     </div>
 </section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#entry">entry</a></li>
+        <li><a href="#form">form</a></li>
+        <li><a href="#reference">reference</a></li>
+        <li><a href="#sense">sense</a></li>
+        <li><a href="#isrenderedby">is rendered by</a></li>
+        <li><a href="#above">above</a></li>
+        <li><a href="#contains">contains</a></li>
+        <li><a href="#hasgraphemesense">has grapheme sense</a></li>
+        <li><a href="#haspart">has part</a></li>
+        <li><a href="#leftof">left of</a></li>
+    </ul>
+    <div class="entity property" id="entry">
+        <h3>entry<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#entry" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://lemon-model.net/lemon#entry</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="form">
+        <h3>form<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#form" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://lemon-model.net/lemon#form</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="reference">
+        <h3>reference<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#reference" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://lemon-model.net/lemon#reference</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="sense">
+        <h3>sense<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#sense" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://lemon-model.net/lemon#sense</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isrenderedby">
+        <h3>is rendered by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isrenderedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.cidoc-crm.org/cidoc-crm/P56_is_rendered_by</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="above">
+        <h3>above<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#above" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.co-ode.org/ontologies/ont.owl#above</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="contains">
+        <h3>contains<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#contains" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/contains</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasgraphemesense">
+        <h3>has grapheme sense<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasgraphemesense" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/hasGraphemeSense</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="haspart">
+        <h3>has part<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#haspart" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/hasPart</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="leftof">
+        <h3>left of<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#leftof" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/leftOf</code></td>
+            </tr>
+        </table>
+    </div>
+</section>
+
 <section id="datatypeproperties">
     <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
+        <li><a href="#transliteration">transliteration</a></li>
+        <li><a href="#writtenrepresentation">written representation</a></li>
         <li><a href="#abzl">abzl</a></li>
         <li><a href="#hasUnicoderepresentation">has Unicode representation</a></li>
         <li><a href="#hethzl">hethzl</a></li>
         <li><a href="#asSVG">as SVG</a></li>
+        <li><a href="#epoch">epoch</a></li>
         <li><a href="#hascuneiformidentifier">has cuneiform identifier</a></li>
         <li><a href="#hasGottsteincode">has Gottstein code</a></li>
         <li><a href="#hasidentifier">has identifier</a></li>
@@ -301,6 +786,34 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
         <li><a href="#meszl">meszl</a></li>
         <li><a href="#signname">sign name</a></li>
     </ul>
+    <div class="entity property" id="transliteration">
+        <h3>transliteration<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#transliteration" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://lemon-model.net/lemon#transliteration</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://lemon-model.net/lemon#writtenRep">lemon:writtenRep</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="writtenrepresentation">
+        <h3>written representation<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#writtenrepresentation" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://lemon-model.net/lemon#writtenRep</code></td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="abzl">
         <h3>abzl<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#abzl" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
@@ -366,6 +879,23 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>URI</th>
                 <td><code>http://www.purl.org/graphemon/asSVG</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="epoch">
+        <h3>epoch<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#epoch" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.purl.org/graphemon/epoch</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</a>
+                </td>
             </tr>
         </table>
     </div>
@@ -494,13 +1024,32 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
     <section id="namedindividuals">
         <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
         <ul class="hlist">
+            <li><a href="#AkkadianLexicon">Akkadian Lexicon</a></li>
             <li><a href="#AxAgrapheme">AxA grapheme</a></li>
+            <li><a href="#GlyphonclaytabletHS306frontside,column1,line3,characterindex7">Glyph on clay tablet HS 306 front side, column 1, line 3, character index 7</a></li>
+            <li><a href="#GlyphonclaytabletHS799frontside,column1,line4,characterindex4">Glyph on clay tablet HS 799 front side, column 1, line 4, character index 4</a></li>
             <li><a href="#Grapheme2(disz)">Grapheme 2(disz)</a></li>
             <li><a href="#Grapheme2(disz)variant1">Grapheme 2(disz) variant 1</a></li>
             <li><a href="#GraphemeAxAvariant1">Grapheme AxA variant 1</a></li>
             <li><a href="#Graphemea">Grapheme a</a></li>
+            <li><a href="#Graphemeasense">Grapheme a sense</a></li>
             <li><a href="#Graphemeavariant1">Grapheme a variant 1</a></li>
+            <li><a href="#Graphemeavariant1atomicpart1">Grapheme a variant 1 atomic part 1</a></li>
+            <li><a href="#Graphemeavariant1atomicpart2">Grapheme a variant 1 atomic part 2</a></li>
+            <li><a href="#Graphemeavariant1atomicpart3">Grapheme a variant 1 atomic part 3</a></li>
             <li><a href="#Graphemeavariant2">Grapheme a variant 2</a></li>
+            <li><a href="#Graphemeavariant2atomicpart1">Grapheme a variant 2 atomic part 1</a></li>
+            <li><a href="#Graphemeavariant2atomicpart2">Grapheme a variant 2 atomic part 2</a></li>
+            <li><a href="#Sumerianlexicon">Sumerian lexicon</a></li>
+            <li><a href="#Wikidata:Water">Wikidata: Water</a></li>
+            <li><a href="#Worda">Word a</a></li>
+            <li><a href="#Wordaform1">Word a form 1</a></li>
+            <li><a href="#Wordaform1occurence1">Word a form1 occurence 1</a></li>
+            <li><a href="#Wordasense">Word a sense</a></li>
+            <li><a href="#Wordmu">Word mu</a></li>
+            <li><a href="#Wordmuform1">Word mu form 1</a></li>
+            <li><a href="#Wordmuform1occurrence1">Word mu form1 occurrence 1</a></li>
+            <li><a href="#Wordmusense">Word mu sense</a></li>
         </ul>
             <div class="entity named_individual" id="Grapheme2(disz)">
         <h3>Grapheme 2(disz)<sup title="named individual" class="sup-ni">ni</sup></h3>
@@ -520,6 +1069,24 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             </dd>
         </table>
     </div>
+            <div class="entity named_individual" id="AkkadianLexicon">
+        <h3>Akkadian Lexicon<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#AkkadianLexicon
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://lemon-model.net/lemon#Lexicon">lemon:Lexicon</a><br/>
+            </dd>
+        </table>
+    </div>
             <div class="entity named_individual" id="AxAgrapheme">
         <h3>AxA grapheme<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
@@ -535,6 +1102,114 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <dt>Class(es)</dt>
             <dd>
                 <a href="http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme">crm:TXP9_Grapheme</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Graphemeasense">
+        <h3>Grapheme a sense<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#Grapheme_a_sense
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.purl.org/graphemon/GraphemeSense">http://www.purl.org/graphemon/GraphemeSense</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Sumerianlexicon">
+        <h3>Sumerian lexicon<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#Sumerian_lexicon
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://lemon-model.net/lemon#Lexicon">lemon:Lexicon</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Wordaform1occurence1">
+        <h3>Word a form1 occurence 1<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#Word_a_form1_occurrence1
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.purl.org/graphemon/WordFormOccurrence">http://www.purl.org/graphemon/WordFormOccurrence</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Wordmuform1occurrence1">
+        <h3>Word mu form1 occurrence 1<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#Word_mu_form1_occurence1
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.purl.org/graphemon/WordFormOccurrence">http://www.purl.org/graphemon/WordFormOccurrence</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="GlyphonclaytabletHS799frontside,column1,line4,characterindex4">
+        <h3>Glyph on clay tablet HS 799 front side, column 1, line 4, character index 4<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#a_25_1_4_4_HS_799_03_front
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.cidoc-crm.org/cidoc-crm/TXP4_Glyph">crm:TXP4_Glyph</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="GlyphonclaytabletHS306frontside,column1,line3,characterindex7">
+        <h3>Glyph on clay tablet HS 306 front side, column 1, line 3, character index 7<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#a_50_1_3_7_HS_306_03_front
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.cidoc-crm.org/cidoc-crm/TXP4_Glyph">crm:TXP4_Glyph</a><br/>
             </dd>
         </table>
     </div>
@@ -610,6 +1285,63 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             </dd>
         </table>
     </div>
+            <div class="entity named_individual" id="Graphemeavariant1atomicpart1">
+        <h3>Grapheme a variant 1 atomic part 1<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at1
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.co-ode.org/ontologies/ont.owl#Paleocode_A">http://www.co-ode.org/ontologies/ont.owl#Paleocode_A</a><br/>
+                <a href="http://www.purl.org/graphemon/CuneiformWedge">http://www.purl.org/graphemon/CuneiformWedge</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Graphemeavariant1atomicpart2">
+        <h3>Grapheme a variant 1 atomic part 2<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at2
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.co-ode.org/ontologies/ont.owl#Paleocode_A">http://www.co-ode.org/ontologies/ont.owl#Paleocode_A</a><br/>
+                <a href="http://www.purl.org/graphemon/CuneiformWedge">http://www.purl.org/graphemon/CuneiformWedge</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Graphemeavariant1atomicpart3">
+        <h3>Grapheme a variant 1 atomic part 3<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at3
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.co-ode.org/ontologies/ont.owl#Paleocode_A">http://www.co-ode.org/ontologies/ont.owl#Paleocode_A</a><br/>
+                <a href="http://www.purl.org/graphemon/CuneiformWedge">http://www.purl.org/graphemon/CuneiformWedge</a><br/>
+            </dd>
+        </table>
+    </div>
             <div class="entity named_individual" id="Graphemeavariant2">
         <h3>Grapheme a variant 2<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
@@ -628,13 +1360,173 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             </dd>
         </table>
     </div>
+            <div class="entity named_individual" id="Graphemeavariant2atomicpart1">
+        <h3>Grapheme a variant 2 atomic part 1<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2_at1
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.co-ode.org/ontologies/ont.owl#Paleocode_A">http://www.co-ode.org/ontologies/ont.owl#Paleocode_A</a><br/>
+                <a href="http://www.purl.org/graphemon/CuneiformWedge">http://www.purl.org/graphemon/CuneiformWedge</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Graphemeavariant2atomicpart2">
+        <h3>Grapheme a variant 2 atomic part 2<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2_at2
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.co-ode.org/ontologies/ont.owl#Paleocode_A">http://www.co-ode.org/ontologies/ont.owl#Paleocode_A</a><br/>
+                <a href="http://www.purl.org/graphemon/CuneiformWedge">http://www.purl.org/graphemon/CuneiformWedge</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Worda">
+        <h3>Word a<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#word_a
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://lemon-model.net/lemon#Word">lemon:Word</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Wordaform1">
+        <h3>Word a form 1<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#word_a_form
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://lemon-model.net/lemon#WordForm">lemon:WordForm</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Wordasense">
+        <h3>Word a sense<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#word_a_sense
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://lemon-model.net/lemon#LexicalSense">lemon:LexicalSense</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Wordmu">
+        <h3>Word mu<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#word_mu
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://lemon-model.net/lemon#Word">lemon:Word</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Wordmuform1">
+        <h3>Word mu form 1<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#word_mu_form1
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://lemon-model.net/lemon#WordForm">lemon:WordForm</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Wordmusense">
+        <h3>Word mu sense<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.co-ode.org/ontologies/ont.owl#word_mu_sense
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://lemon-model.net/lemon#LexicalSense">lemon:LexicalSense</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Wikidata:Water">
+        <h3>Wikidata: Water<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.wikidata.org/entity/Q283
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
     </section>
 
   <section id="namespaces">
     <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <dl>
         <dt>default (:)</dt>
-        <dd><code>n9a6b8a2e2b1546fd82e0778c0195c384b1</code></dd>
+        <dd><code>n56b54f8d107e4c9d97fbf7fcf09dc75ab1</code></dd>
         <dt>brick</dt>
         <dd><code>https://brickschema.org/schema/Brick#</code></dd>
         <dt>crm</dt>
@@ -655,6 +1547,8 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
         <dd><code>http://usefulinc.com/ns/doap#</code></dd>
         <dt>foaf</dt>
         <dd><code>http://xmlns.com/foaf/0.1/</code></dd>
+        <dt>lemon</dt>
+        <dd><code>http://lemon-model.net/lemon#</code></dd>
         <dt>odrl</dt>
         <dd><code>http://www.w3.org/ns/odrl/2/</code></dd>
         <dt>org</dt>
@@ -687,6 +1581,8 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
         <dd><code>http://purl.org/vocab/vann/</code></dd>
         <dt>void</dt>
         <dd><code>http://rdfs.org/ns/void#</code></dd>
+        <dt>wd</dt>
+        <dd><code>http://www.wikidata.org/entity/</code></dd>
         <dt>xsd</dt>
         <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
     </dl>
