@@ -42,6 +42,36 @@ lemon:sense rdf:type owl:ObjectProperty ;
             rdfs:label "sense" .
 
 
+###  http://www.cidoc-crm.org/cidoc-crm/P56_is_rendered_by
+<http://www.cidoc-crm.org/cidoc-crm/P56_is_rendered_by> rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "is rendered by" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#above
+<http://www.co-ode.org/ontologies/ont.owl#above> rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "above" .
+
+
+###  http://www.purl.org/graphemon/contains
+<http://www.purl.org/graphemon/contains> rdf:type owl:ObjectProperty ;
+                                         rdfs:label "contains" .
+
+
+###  http://www.purl.org/graphemon/hasGraphemeSense
+<http://www.purl.org/graphemon/hasGraphemeSense> rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "has grapheme sense" .
+
+
+###  http://www.purl.org/graphemon/hasPart
+<http://www.purl.org/graphemon/hasPart> rdf:type owl:ObjectProperty ;
+                                        rdfs:label "has part" .
+
+
+###  http://www.purl.org/graphemon/leftOf
+<http://www.purl.org/graphemon/leftOf> rdf:type owl:ObjectProperty ;
+                                       rdfs:label "left of" .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -79,6 +109,11 @@ lemon:writtenRep rdf:type owl:DatatypeProperty ;
 ###  http://www.purl.org/graphemon/asSVG
 <http://www.purl.org/graphemon/asSVG> rdf:type owl:DatatypeProperty ;
                                       rdfs:label "as SVG" .
+
+
+###  http://www.purl.org/graphemon/epoch
+<http://www.purl.org/graphemon/epoch> rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf owl:topDataProperty .
 
 
 ###  http://www.purl.org/graphemon/hasCuneiformIdentifier
@@ -156,9 +191,42 @@ lemon:WordForm rdf:type owl:Class ;
                rdfs:label "word form" .
 
 
+###  http://www.cidoc-crm.org/cidoc-crm/TXP4_Glyph
+<http://www.cidoc-crm.org/cidoc-crm/TXP4_Glyph> rdf:type owl:Class ;
+                                                rdfs:label "glyph" .
+
+
 ###  http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme
 <http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme> rdf:type owl:Class ;
                                                    rdfs:label "grapheme" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#Paleocode_A
+<http://www.co-ode.org/ontologies/ont.owl#Paleocode_A> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.purl.org/graphemon/PaleoCodageDescriptionAtomicPart> ;
+                                                       rdfs:label "PaleoCodage Wedge Type A" .
+
+
+###  http://www.purl.org/graphemon/CuneiformWedge
+<http://www.purl.org/graphemon/CuneiformWedge> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.purl.org/graphemon/Stroketyped> ;
+                                               rdfs:label "cuneiform wedge" .
+
+
+###  http://www.purl.org/graphemon/GottsteinDescriptionAtomicPart
+<http://www.purl.org/graphemon/GottsteinDescriptionAtomicPart> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.purl.org/graphemon/GraphemeDescriptionAtomicPart> ;
+                                                               rdfs:label "Gottstein description atomic part" .
+
+
+###  http://www.purl.org/graphemon/GraphemeAtomicPart
+<http://www.purl.org/graphemon/GraphemeAtomicPart> rdf:type owl:Class ;
+                                                   rdfs:label "grapheme atomic part" .
+
+
+###  http://www.purl.org/graphemon/GraphemeDescriptionAtomicPart
+<http://www.purl.org/graphemon/GraphemeDescriptionAtomicPart> rdf:type owl:Class ;
+                                                              rdfs:label "grapheme description atomic part" .
 
 
 ###  http://www.purl.org/graphemon/GraphemeSense
@@ -169,6 +237,18 @@ lemon:WordForm rdf:type owl:Class ;
 ###  http://www.purl.org/graphemon/GraphemeVariant
 <http://www.purl.org/graphemon/GraphemeVariant> rdf:type owl:Class ;
                                                 rdfs:label "grapheme variant" .
+
+
+###  http://www.purl.org/graphemon/PaleoCodageDescriptionAtomicPart
+<http://www.purl.org/graphemon/PaleoCodageDescriptionAtomicPart> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.purl.org/graphemon/GraphemeDescriptionAtomicPart> ;
+                                                                 rdfs:label "PaleoCodage description atomic part" .
+
+
+###  http://www.purl.org/graphemon/Stroketyped
+<http://www.purl.org/graphemon/Stroketyped> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://www.purl.org/graphemon/GraphemeAtomicPart> ;
+                                            rdfs:label "stroke typed" .
 
 
 ###  http://www.purl.org/graphemon/WordFormOccurrence
@@ -191,8 +271,18 @@ lemon:WordForm rdf:type owl:Class ;
 <http://www.co-ode.org/ontologies/ont.owl#AxA_grapheme> rdf:type owl:NamedIndividual ,
                                                                  <http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme> ;
                                                         <http://www.co-ode.org/ontologies/ont.owl#hasUnicodeRepresentation> "𒀁" ;
+                                                        <http://www.purl.org/graphemon/hasGottsteinCode> "a6" ;
+                                                        <http://www.purl.org/graphemon/hasPaleoCode> "a-:sa-:sa:sa-a:a" ;
                                                         <http://www.purl.org/graphemon/hasUnicodeCodePoint> "U+12001" ;
+                                                        <http://www.purl.org/graphemon/meszl> 845 ;
                                                         rdfs:label "AxA grapheme" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#Grapheme_a_sense
+<http://www.co-ode.org/ontologies/ont.owl#Grapheme_a_sense> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.purl.org/graphemon/GraphemeSense> ;
+                                                            lemon:reference <http://www.wikidata.org/entity/Q283> ;
+                                                            rdfs:label "Grapheme a sense" .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#Sumerian_lexicon
@@ -202,9 +292,34 @@ lemon:WordForm rdf:type owl:Class ;
                                                             rdfs:label "Sumerian lexicon" .
 
 
+###  http://www.co-ode.org/ontologies/ont.owl#Word_a_form1_occurrence1
+<http://www.co-ode.org/ontologies/ont.owl#Word_a_form1_occurrence1> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.purl.org/graphemon/WordFormOccurrence> ;
+                                                                    rdfs:label "Word a form1 occurence 1" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#Word_mu_form1_occurence1
+<http://www.co-ode.org/ontologies/ont.owl#Word_mu_form1_occurence1> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.purl.org/graphemon/WordFormOccurrence> ;
+                                                                    rdfs:label "Word mu form1 occurrence 1" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#a_25_1_4_4_HS_799_03_front
+<http://www.co-ode.org/ontologies/ont.owl#a_25_1_4_4_HS_799_03_front> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.cidoc-crm.org/cidoc-crm/TXP4_Glyph> ;
+                                                                      rdfs:label "Glyph on clay tablet HS 799 front side, column 1, line 4, character index 4" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#a_50_1_3_7_HS_306_03_front
+<http://www.co-ode.org/ontologies/ont.owl#a_50_1_3_7_HS_306_03_front> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.cidoc-crm.org/cidoc-crm/TXP4_Glyph> ;
+                                                                      rdfs:label "Glyph on clay tablet HS 306 front side, column 1, line 3, character index 7" .
+
+
 ###  http://www.co-ode.org/ontologies/ont.owl#a_grapheme
 <http://www.co-ode.org/ontologies/ont.owl#a_grapheme> rdf:type owl:NamedIndividual ,
                                                                <http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme> ;
+                                                      <http://www.purl.org/graphemon/hasGraphemeSense> <http://www.co-ode.org/ontologies/ont.owl#Grapheme_a_sense> ;
                                                       <http://www.co-ode.org/ontologies/ont.owl#abzl> 470 ;
                                                       <http://www.co-ode.org/ontologies/ont.owl#hasUnicodeRepresentation> "𒀀" ;
                                                       <http://www.co-ode.org/ontologies/ont.owl#hethzl> 364 ,
@@ -218,6 +333,7 @@ lemon:WordForm rdf:type owl:Class ;
 ###  http://www.co-ode.org/ontologies/ont.owl#grapheme_AxA_var1
 <http://www.co-ode.org/ontologies/ont.owl#grapheme_AxA_var1> rdf:type owl:NamedIndividual ,
                                                                       <http://www.purl.org/graphemon/GraphemeVariant> ;
+                                                             <http://www.purl.org/graphemon/hasPart> <http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1> ;
                                                              <http://www.purl.org/graphemon/asSVG> "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"170\" height=\"80\"><defs></defs><g><path fill=\"#000000\" stroke=\"#000000\" paint-order=\"fill stroke markers\" d=\" M 25 20 L 35 20 L 30 30 L 25 20 M 30 30 L 30 60 M 35 27 L 45 27 L 40 37 L 35 27 M 40 37 L 40 52 M 45 27 L 55 27 L 50 37 L 45 27 M 50 37 L 50 52 M 45 34 L 55 34 L 50 44 L 45 34 M 50 44 L 50 59 M 55 20 L 65 20 L 60 30 L 55 20 M 60 30 L 60 60 M 55 27 L 65 27 L 60 37 L 55 27 M 60 37 L 60 67\" stroke-miterlimit=\"10\" stroke-dasharray=\"\"></path></g></svg>" ;
                                                              <http://www.purl.org/graphemon/hasGottsteinCode> "a6" ;
                                                              <http://www.purl.org/graphemon/hasPaleoCode> "a-:sa-:sa:sa-a:a" ;
@@ -227,18 +343,61 @@ lemon:WordForm rdf:type owl:Class ;
 ###  http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1
 <http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1> rdf:type owl:NamedIndividual ,
                                                                     <http://www.purl.org/graphemon/GraphemeVariant> ;
+                                                           <http://www.cidoc-crm.org/cidoc-crm/P56_is_rendered_by> <http://www.co-ode.org/ontologies/ont.owl#a_50_1_3_7_HS_306_03_front> ;
+                                                           <http://www.purl.org/graphemon/contains> <http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at1> ;
                                                            <http://www.purl.org/graphemon/asSVG> "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"170\" height=\"80\"><defs></defs><g><path fill=\"#000000\" stroke=\"#000000\" paint-order=\"fill stroke markers\" d=\" M 25 20 L 35 20 L 30 30 L 25 20 M 30 30 L 30 60 M 35 20 L 45 20 L 40 30 L 35 20 M 40 30 L 40 60 M 35 27 L 45 27 L 40 37 L 35 27 M 40 37 L 40 67\" stroke-miterlimit=\"10\" stroke-dasharray=\"\"></path></g></svg>" ;
+                                                           <http://www.purl.org/graphemon/epoch> "OldBabylonian" ;
                                                            <http://www.purl.org/graphemon/hasGottsteinCode> "a3" ;
                                                            <http://www.purl.org/graphemon/hasPaleoCode> "a-a:a" ;
                                                            rdfs:label "Grapheme a variant 1" .
 
 
+###  http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at1
+<http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at1> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.co-ode.org/ontologies/ont.owl#Paleocode_A> ,
+                                                                        <http://www.purl.org/graphemon/CuneiformWedge> ;
+                                                               <http://www.purl.org/graphemon/leftOf> <http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at2> ;
+                                                               rdfs:label "Grapheme a variant 1 atomic part 1" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at2
+<http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at2> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.co-ode.org/ontologies/ont.owl#Paleocode_A> ,
+                                                                        <http://www.purl.org/graphemon/CuneiformWedge> ;
+                                                               <http://www.co-ode.org/ontologies/ont.owl#above> <http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at3> ;
+                                                               rdfs:label "Grapheme a variant 1 atomic part 2" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at3
+<http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1_at3> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.co-ode.org/ontologies/ont.owl#Paleocode_A> ,
+                                                                        <http://www.purl.org/graphemon/CuneiformWedge> ;
+                                                               rdfs:label "Grapheme a variant 1 atomic part 3" .
+
+
 ###  http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2
 <http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2> rdf:type owl:NamedIndividual ,
                                                                     <http://www.purl.org/graphemon/GraphemeVariant> ;
+                                                           <http://www.cidoc-crm.org/cidoc-crm/P56_is_rendered_by> <http://www.co-ode.org/ontologies/ont.owl#a_25_1_4_4_HS_799_03_front> ;
+                                                           <http://www.purl.org/graphemon/epoch> "NeoAssyrian" ;
                                                            <http://www.purl.org/graphemon/hasGottsteinCode> "a2" ;
                                                            <http://www.purl.org/graphemon/hasPaleoCode> "a-a" ;
                                                            rdfs:label "Grapheme a variant 2" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2_at1
+<http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2_at1> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.co-ode.org/ontologies/ont.owl#Paleocode_A> ,
+                                                                        <http://www.purl.org/graphemon/CuneiformWedge> ;
+                                                               <http://www.purl.org/graphemon/leftOf> <http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2_at2> ;
+                                                               rdfs:label "Grapheme a variant 2 atomic part 1" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2_at2
+<http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2_at2> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.co-ode.org/ontologies/ont.owl#Paleocode_A> ,
+                                                                        <http://www.purl.org/graphemon/CuneiformWedge> ;
+                                                               rdfs:label "Grapheme a variant 2 atomic part 2" .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#word_a
