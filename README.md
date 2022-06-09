@@ -53,6 +53,8 @@ Results of these similarity calculations can be added as relations in the ontolo
 
 # Usage examples of the ontology model
 
+This repository highlights two usage examples of the ontology model using the cuneiform language. The first example represents two cuneiform words and their grapheme variants, the second example higlights the relationship of two grapheme variants.
+
 ## Representation example: Cuneiform word "A" vs. Cuneiform word 2(disz)
 
 The cuneiform word "A", with a sense of water consists of exactly one grapheme, "A", which may be depicted in at least two grapheme variants which may occur as glyph instances on certain cuneiform tablets.
@@ -60,7 +62,13 @@ Using the ontology model, these relations can be described.
 
 ## Relationship between Graphemes: Cuneiform Grapheme "A" is part of Grapheme AxA
 
+This example highlights the vocabulary of relations between two graphemes. Given a Grapheme one, this Grapheme might be included in another grapheme.
+
+The example which highlights this relation is the example of the cuneiform sign "A" which is included in the cuneiform sign "AxA".
+
 # Application of the ontology model
+
+While we concepted the ontology model for the usage for modeling cuneiform graphemes, our goal was to keep the ontology so general that it can be applied to other languages as well. The following applications may also be performed on other language corpora.
 
 ## Creation of machine learning resources
 
