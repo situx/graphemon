@@ -3,6 +3,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix lemon: <http://lemon-model.net/lemon#> .
 @base <http://www.w3.org/2002/07/owl#> .
 
 [ rdf:type owl:Ontology ;
@@ -18,8 +19,43 @@
 
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  http://lemon-model.net/lemon#entry
+lemon:entry rdf:type owl:ObjectProperty ;
+            rdfs:label "entry" .
+
+
+###  http://lemon-model.net/lemon#form
+lemon:form rdf:type owl:ObjectProperty ;
+           rdfs:label "form" .
+
+
+###  http://lemon-model.net/lemon#reference
+lemon:reference rdf:type owl:ObjectProperty ;
+                rdfs:label "reference" .
+
+
+###  http://lemon-model.net/lemon#sense
+lemon:sense rdf:type owl:ObjectProperty ;
+            rdfs:label "sense" .
+
+
+#################################################################
 #    Data properties
 #################################################################
+
+###  http://lemon-model.net/lemon#transliteration
+lemon:transliteration rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf lemon:writtenRep ;
+                      rdfs:label "transliteration" .
+
+
+###  http://lemon-model.net/lemon#writtenRep
+lemon:writtenRep rdf:type owl:DatatypeProperty ;
+                 rdfs:label "written representation" .
+
 
 ###  http://www.co-ode.org/ontologies/ont.owl#abzl
 <http://www.co-ode.org/ontologies/ont.owl#abzl> rdf:type owl:DatatypeProperty ;
@@ -88,9 +124,46 @@
 #    Classes
 #################################################################
 
+###  http://lemon-model.net/lemon#LexicalEntity
+lemon:LexicalEntity rdf:type owl:Class ;
+                    rdfs:label "lexical entity" .
+
+
+###  http://lemon-model.net/lemon#LexicalForm
+lemon:LexicalForm rdf:type owl:Class ;
+                  rdfs:label "lexical form" .
+
+
+###  http://lemon-model.net/lemon#LexicalSense
+lemon:LexicalSense rdf:type owl:Class ;
+                   rdfs:label "lexical sense" .
+
+
+###  http://lemon-model.net/lemon#Lexicon
+lemon:Lexicon rdf:type owl:Class ;
+              rdfs:label "lexicon" .
+
+
+###  http://lemon-model.net/lemon#Word
+lemon:Word rdf:type owl:Class ;
+           rdfs:subClassOf lemon:LexicalEntity ;
+           rdfs:label "word" .
+
+
+###  http://lemon-model.net/lemon#WordForm
+lemon:WordForm rdf:type owl:Class ;
+               rdfs:subClassOf lemon:LexicalForm ;
+               rdfs:label "word form" .
+
+
 ###  http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme
 <http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme> rdf:type owl:Class ;
                                                    rdfs:label "grapheme" .
+
+
+###  http://www.purl.org/graphemon/GraphemeSense
+<http://www.purl.org/graphemon/GraphemeSense> rdf:type owl:Class ;
+                                              rdfs:label "grapheme sense" .
 
 
 ###  http://www.purl.org/graphemon/GraphemeVariant
@@ -98,9 +171,21 @@
                                                 rdfs:label "grapheme variant" .
 
 
+###  http://www.purl.org/graphemon/WordFormOccurrence
+<http://www.purl.org/graphemon/WordFormOccurrence> rdf:type owl:Class ;
+                                                   rdfs:label "word form occurence" .
+
+
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://www.co-ode.org/ontologies/ont.owl#AkkadianLexicon
+<http://www.co-ode.org/ontologies/ont.owl#AkkadianLexicon> rdf:type owl:NamedIndividual ,
+                                                                    lemon:Lexicon ;
+                                                           lemon:entry <http://www.co-ode.org/ontologies/ont.owl#word_mu> ;
+                                                           rdfs:label "Akkadian Lexicon" .
+
 
 ###  http://www.co-ode.org/ontologies/ont.owl#AxA_grapheme
 <http://www.co-ode.org/ontologies/ont.owl#AxA_grapheme> rdf:type owl:NamedIndividual ,
@@ -108,6 +193,13 @@
                                                         <http://www.co-ode.org/ontologies/ont.owl#hasUnicodeRepresentation> "𒀁" ;
                                                         <http://www.purl.org/graphemon/hasUnicodeCodePoint> "U+12001" ;
                                                         rdfs:label "AxA grapheme" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#Sumerian_lexicon
+<http://www.co-ode.org/ontologies/ont.owl#Sumerian_lexicon> rdf:type owl:NamedIndividual ,
+                                                                     lemon:Lexicon ;
+                                                            lemon:entry <http://www.co-ode.org/ontologies/ont.owl#word_a> ;
+                                                            rdfs:label "Sumerian lexicon" .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#a_grapheme
@@ -149,6 +241,51 @@
                                                            rdfs:label "Grapheme a variant 2" .
 
 
+###  http://www.co-ode.org/ontologies/ont.owl#word_a
+<http://www.co-ode.org/ontologies/ont.owl#word_a> rdf:type owl:NamedIndividual ,
+                                                           lemon:Word ;
+                                                  lemon:sense <http://www.co-ode.org/ontologies/ont.owl#word_a_sense> ;
+                                                  lemon:transliteration "a" ;
+                                                  lemon:writtenRep "𒀀" ;
+                                                  rdfs:label "Word a" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#word_a_form
+<http://www.co-ode.org/ontologies/ont.owl#word_a_form> rdf:type owl:NamedIndividual ,
+                                                                lemon:WordForm ;
+                                                       lemon:transliteration "a" ;
+                                                       lemon:writtenRep "𒀀" ;
+                                                       rdfs:label "Word a form 1" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#word_a_sense
+<http://www.co-ode.org/ontologies/ont.owl#word_a_sense> rdf:type owl:NamedIndividual ,
+                                                                 lemon:LexicalSense ;
+                                                        lemon:reference <http://www.wikidata.org/entity/Q283> ;
+                                                        rdfs:label "Word a sense" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#word_mu
+<http://www.co-ode.org/ontologies/ont.owl#word_mu> rdf:type owl:NamedIndividual ,
+                                                            lemon:Word ;
+                                                   rdfs:label "Word mu" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#word_mu_form1
+<http://www.co-ode.org/ontologies/ont.owl#word_mu_form1> rdf:type owl:NamedIndividual ,
+                                                                  lemon:WordForm ;
+                                                         lemon:transliteration "mu" ;
+                                                         lemon:writtenRep "𒀀" ;
+                                                         rdfs:label "Word mu form 1" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#word_mu_sense
+<http://www.co-ode.org/ontologies/ont.owl#word_mu_sense> rdf:type owl:NamedIndividual ,
+                                                                  lemon:LexicalSense ;
+                                                         lemon:reference <http://www.wikidata.org/entity/Q283> ;
+                                                         rdfs:label "Word mu sense" .
+
+
 ###  http://www.co-ode.org/ontologies/ont.owl#2(disz)_grapheme
 <http://www.co-ode.org/ontologies/ont.owl#2(disz)_grapheme> rdf:type owl:NamedIndividual ,
                                                                      <http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme> ;
@@ -165,6 +302,11 @@
                                                                  <http://www.purl.org/graphemon/hasGottsteinCode> "a2" ;
                                                                  <http://www.purl.org/graphemon/hasPaleoCode> "a-a" ;
                                                                  rdfs:label "Grapheme 2(disz) variant 1" .
+
+
+###  http://www.wikidata.org/entity/Q283
+<http://www.wikidata.org/entity/Q283> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "Wikidata: Water" .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
