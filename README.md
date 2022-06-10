@@ -45,9 +45,13 @@ GraphemeVariants can be distinguished by etymological relations (on a semantic l
 For example, to distinguish cuneiform signs, one may use image similarity measurements on representations of Graphemes in PNG or SVG and may choose String similarity metrics to highlight differences on String descriptions such as character description languages.
 Results of these similarity calculations can be added as relations in the ontology model.
 
+![Etymology Example](images/etymologyexample.png)
+
 # Relation to existing ontology models
 
 ## Relation to the Ontolex-Lemon model
+
+![Relation to Ontolex-Lemon](images/graphemon_lemon_connection.png)
 
 ## Relation to the CIDOC-CRM CRMtex model
 
