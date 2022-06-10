@@ -53,9 +53,34 @@ Results of these similarity calculations can be added as relations in the ontolo
 
 ## Relation to the Ontolex-Lemon model
 
+The Ontolex-Lemon model contains definitions for the following items we relate to:
+* LexicalForm/Word: A lexical form which is defined in a Lexicon
+* LexicalSense: A lexical sense which is associated with a Word: We define a derived GraphemeSense
+
+We add:
+* WordFormOccurrence: A word form which is composed out of defined grapheme variants which are at best related to representations on physical media.
+* Properties to relate WordFormOccurrences to Graphemes and Grapheme Variants 
+
 ![Relation to Ontolex-Lemon](images/graphemon_lemon_connection.png)
 
 ## Relation to the CIDOC-CRM CRMtex model
+
+This ontology model as interlinks to the CIDOC-CRM CRMtex model (https://cidoc-crm.org/crmtex/fm_releases).
+
+CIDOC-CRM CRMtex in particular specifies the following classes we connect to:
+* Glyph: A physical representation of an occurrence of a grapheme on a medium
+* Grapheme: A general grapheme classification
+* Properties relating Graphemes to Glyphs
+
+We add a better description and decomposition of graphemes, grapheme parts, atomic parts and etymology in the Graphemon Ontology model.
+
+## Relation to the W3C Web Annotation Data Model
+
+The W3C Web Annotation Data Model is a linked-data based annotation standard for image and text media. (https://www.w3.org/TR/annotation-model/)
+
+The model can be used to annotate images of cuneiform tablets to annotate e.g. occurrences of cuneiform signs.
+
+Our ontology model allows to relate these image annotations to defined identifiers of graphemes and grapheme variants.
 
 # Usage examples of the ontology model
 
@@ -70,8 +95,6 @@ Using the ontology model, these relations can be described.
 In addition, we can relate the two grapheme variants of cuneiform sign A in an etymological context, as we know that these grapheme variants tend to occur at different points in time.
 We can contrast these etymological statements with String similarity statements based on the PaleoCodage encoding to answer questions such as:
 * How similar are etymologically related grapheme variants on a descriptive level?
-
-
 
 ## Relationship between Graphemes: Cuneiform Grapheme "A" is part of Grapheme AxA
 
@@ -88,6 +111,21 @@ While we concepted the ontology model for the usage for modeling cuneiform graph
 ## Creation of machine learning resources
 
 The ontology model may be used to query targeted data to create machine learning datasets based on glyphs.
+Answers to queries such as:
+* Give me all sign variants of sign "A" from an OldBabylonian time period from photos and 3D renderings?
+* Give me all sing variants which are similar to grapheme variant 2 of sign "A"?
+
+can help greatly when gathering data for appropriate machine learning tasks.
+
+## Sign variant registries based on linked data
+
+Especially in cuneiform studies, but also as an interesting application for other scripts, an overview of all sign variants across space and time is essential for researchers to draw the right conclusions when interpreting a text.
+* When and where did this grapheme variant occur?
+* Which grapheme variants are similar to the current grpaheme and on which text mediums did they occur? Are there example images?
+
+Example: https://situx.github.io/PaleoCodage/
+
+The Graphemon model will allow to answer these questions to scholars, as answers to these questions can be queried from the setup of the ontology model.
 
 # Applicability to other scripts
 
