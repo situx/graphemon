@@ -61,10 +61,19 @@ This repository highlights two usage examples of the ontology model using the cu
 
 ## Representation example: Cuneiform word "A" vs. Cuneiform word 2(disz)
 
+File: https://github.com/situx/graphemon/blob/main/examples/cuneiform_a_example.ttl
+
 The cuneiform word "A", with a sense of water consists of exactly one grapheme, "A", which may be depicted in at least two grapheme variants which may occur as glyph instances on certain cuneiform tablets.
 Using the ontology model, these relations can be described.
+In addition, we can relate the two grapheme variants of cuneiform sign A in an etymological context, as we know that these grapheme variants tend to occur at different points in time.
+We can contrast these etymological statements with String similarity statements based on the PaleoCodage encoding to answer questions such as:
+* How similar are etymologically related grapheme variants on a descriptive level?
+
+
 
 ## Relationship between Graphemes: Cuneiform Grapheme "A" is part of Grapheme AxA
+
+File: https://github.com/situx/graphemon/blob/main/examples/cuneiform_a_example.ttl
 
 This example highlights the vocabulary of relations between two graphemes. Given a Grapheme one, this Grapheme might be included in another grapheme.
 
@@ -79,5 +88,9 @@ While we concepted the ontology model for the usage for modeling cuneiform graph
 The ontology model may be used to query targeted data to create machine learning datasets based on glyphs.
 
 # Applicability to other scripts
+
+Ideas for application:
+* Egyptian Hieroglyphics
+* Ogham Script
 
 
