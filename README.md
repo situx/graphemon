@@ -35,6 +35,8 @@ A description in at least two of the aforementioned representations allows for t
 
 For grapheme description models: These may also be expressed directly in RDF triples.
 
+![Representation of a character description language in RDF](images/paleocodeinrdf.png)
+
 ## GraphemeVariant Etymology
 
 Similar to the representation of [lemonETY](https://github.com/anasfkhan81/lemonEty), this ontology model supports to model etymology relations of grapheme variants.
