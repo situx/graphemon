@@ -3,6 +3,18 @@ This repository contains a complimentary ontology model to the Ontolex-Lemon mod
 Its goal is the representation of grpahemes and grapheme variants and the connection of these variants to actual representations of graphemes, e.g. glyphs on given mediums.
 Documentation: https://situx.github.io/graphemon/
 
+# Motivation
+
+The documentation of graphemes and grapheme variants is an emerging field of studies in many languages, but is especially important for languages which exhibit a great variety in their writing system across space and time.
+
+![Sign variants in cuneiform for the same sign in the same spatiotemporal context](images/signvariants.png)
+
+On the example of cuneiform, the image above shows variants of the same sign E in the same spatiotemporal context, from the same exhibition site.
+To display this sign E using a standard cuneiform font would inevitably lead to a false representation of sign contents and is therefore rarely considered by Assyriologists.
+At the same time, the composition of a cuneiform sign variant helps greatly in the interpretation of the given text and in dating it.
+Hence, it might seem crucial to document and relate grapheme variants to dictionary resources and actual occurrences of these on physical mediums in linked data.
+The Graphemon Ontology model provides the foundation for this by defining a linked data model and ontology for such representations.
+
 # Foundations
 To explain the core of the ontology model, the following fundamental concepts should be explored:
 * **Glyph**: A physical representation of a written script as defined by the CIDOC CRMtex extension
