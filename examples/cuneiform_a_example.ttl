@@ -87,6 +87,16 @@ lemon:sense rdf:type owl:ObjectProperty ;
                                        rdfs:label "left of" .
 
 
+###  http://www.purl.org/graphemon/occurance
+<http://www.purl.org/graphemon/occurance> rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.purl.org/graphemon/variant
+<http://www.purl.org/graphemon/variant> rdf:type owl:ObjectProperty ;
+                                        rdfs:subPropertyOf lemon:form .
+
+
 ###  http://www.w3.org/ns/oa#hasBody
 <http://www.w3.org/ns/oa#hasBody> rdf:type owl:ObjectProperty ;
                                   rdfs:subPropertyOf owl:topObjectProperty ;
@@ -368,6 +378,7 @@ lemon:WordForm rdf:type owl:Class ;
 ###  http://www.co-ode.org/ontologies/ont.owl#AxA_grapheme
 <http://www.co-ode.org/ontologies/ont.owl#AxA_grapheme> rdf:type owl:NamedIndividual ,
                                                                  <http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme> ;
+                                                        <http://www.purl.org/graphemon/variant> <http://www.co-ode.org/ontologies/ont.owl#grapheme_AxA_var1> ;
                                                         <http://www.co-ode.org/ontologies/ont.owl#hasUnicodeRepresentation> "𒀁" ;
                                                         <http://www.purl.org/graphemon/hasGottsteinCode> "a6" ;
                                                         <http://www.purl.org/graphemon/hasPaleoCode> "a-:sa-:sa:sa-a:a" ;
@@ -454,6 +465,8 @@ lemon:WordForm rdf:type owl:Class ;
 <http://www.co-ode.org/ontologies/ont.owl#a_grapheme> rdf:type owl:NamedIndividual ,
                                                                <http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme> ;
                                                       <http://www.purl.org/graphemon/hasGraphemeSense> <http://www.co-ode.org/ontologies/ont.owl#Grapheme_a_sense> ;
+                                                      <http://www.purl.org/graphemon/variant> <http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var1> ,
+                                                                                              <http://www.co-ode.org/ontologies/ont.owl#grapheme_a_var2> ;
                                                       <http://www.co-ode.org/ontologies/ont.owl#abzl> 470 ;
                                                       <http://www.co-ode.org/ontologies/ont.owl#hasUnicodeRepresentation> "𒀀" ;
                                                       <http://www.co-ode.org/ontologies/ont.owl#hethzl> 364 ,
@@ -556,6 +569,7 @@ lemon:WordForm rdf:type owl:Class ;
 ###  http://www.co-ode.org/ontologies/ont.owl#word_a
 <http://www.co-ode.org/ontologies/ont.owl#word_a> rdf:type owl:NamedIndividual ,
                                                            lemon:Word ;
+                                                  lemon:form <http://www.co-ode.org/ontologies/ont.owl#word_a_form> ;
                                                   lemon:sense <http://www.co-ode.org/ontologies/ont.owl#word_a_sense> ;
                                                   lemon:transliteration "a" ;
                                                   lemon:writtenRep "𒀀" ;
@@ -565,6 +579,7 @@ lemon:WordForm rdf:type owl:Class ;
 ###  http://www.co-ode.org/ontologies/ont.owl#word_a_form
 <http://www.co-ode.org/ontologies/ont.owl#word_a_form> rdf:type owl:NamedIndividual ,
                                                                 lemon:WordForm ;
+                                                       <http://www.purl.org/graphemon/occurance> <http://www.co-ode.org/ontologies/ont.owl#Word_a_form1_occurrence1> ;
                                                        lemon:transliteration "a" ;
                                                        lemon:writtenRep "𒀀" ;
                                                        rdfs:label "Word a form 1" .
@@ -580,12 +595,14 @@ lemon:WordForm rdf:type owl:Class ;
 ###  http://www.co-ode.org/ontologies/ont.owl#word_mu
 <http://www.co-ode.org/ontologies/ont.owl#word_mu> rdf:type owl:NamedIndividual ,
                                                             lemon:Word ;
+                                                   lemon:form <http://www.co-ode.org/ontologies/ont.owl#word_mu_form1> ;
                                                    rdfs:label "Word mu" .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#word_mu_form1
 <http://www.co-ode.org/ontologies/ont.owl#word_mu_form1> rdf:type owl:NamedIndividual ,
                                                                   lemon:WordForm ;
+                                                         <http://www.purl.org/graphemon/occurance> <http://www.co-ode.org/ontologies/ont.owl#Word_mu_form1_occurence1> ;
                                                          lemon:transliteration "mu" ;
                                                          lemon:writtenRep "𒀀" ;
                                                          rdfs:label "Word mu form 1" .
@@ -601,6 +618,7 @@ lemon:WordForm rdf:type owl:Class ;
 ###  http://www.co-ode.org/ontologies/ont.owl#2(disz)_grapheme
 <http://www.co-ode.org/ontologies/ont.owl#2(disz)_grapheme> rdf:type owl:NamedIndividual ,
                                                                      <http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme> ;
+                                                            <http://www.purl.org/graphemon/variant> <http://www.co-ode.org/ontologies/ont.owl#grapheme_2(disz)_var1> ;
                                                             <http://www.co-ode.org/ontologies/ont.owl#hasUnicodeRepresentation> "𒈫" ;
                                                             <http://www.purl.org/graphemon/hasUnicodeCodePoint> "U+1222B" ;
                                                             <http://www.purl.org/graphemon/meszl> 825 ;
