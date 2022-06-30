@@ -37,6 +37,10 @@
                              <http://www.w3.org/2004/02/skos/core#definition> "A literal type which describes transliterations of graphemes in ASCII characters only" .
 
 
+###  http://www.purl.org/graphemon/extendedGottsteinLiteral
+:extendedGottsteinLiteral rdf:type rdfs:Datatype .
+
+
 ###  http://www.purl.org/graphemon/gottsteinLiteral
 :gottsteinLiteral rdf:type rdfs:Datatype ;
                   rdfs:label "Gottstein Literal" ;
@@ -65,6 +69,11 @@
 ###  http://lemon-model.net/lemon#reference
 lemon:reference rdf:type owl:ObjectProperty ;
                 rdfs:label "reference" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P62_depicted_by
+cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
+                      rdfs:label "depicted by" .
 
 
 ###  http://www.purl.org/graphemon/above
@@ -275,13 +284,23 @@ lemon:reference rdf:type owl:ObjectProperty ;
                         <http://www.w3.org/2004/02/skos/core#definition> "An identifier which relates to a definition in a cuneiform dictionary or sign list" .
 
 
+###  http://www.purl.org/graphemon/hasExtendedGottsteinCode
+:hasExtendedGottsteinCode rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :hasGottsteinCode ;
+                          rdfs:domain :GraphemeVariant ;
+                          rdfs:range :extendedGottsteinLiteral ;
+                          rdfs:label "has extended Gottstein Code" ;
+                          <http://www.w3.org/2004/02/skos/core#definition> "An extended Gottstein code description of a cuneiform sign" ;
+                          <http://www.w3.org/2004/02/skos/core#note> "An extended Gottstein description exposes the Winkelhaken as an extra character w" .
+
+
 ###  http://www.purl.org/graphemon/hasGottsteinCode
 :hasGottsteinCode rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :hasCuneiformGraphemeDescription ;
                   rdfs:domain :GraphemeVariant ;
                   rdfs:range :gottsteinLiteral ;
                   rdfs:label "has Gottstein Code" ;
-                  <http://www.w3.org/2004/02/skos/core#definition> "A Gottstein code description of a cuneiform character" .
+                  <http://www.w3.org/2004/02/skos/core#definition> "A Gottstein code description of a cuneiform sign" .
 
 
 ###  http://www.purl.org/graphemon/hasGraphemeDescription
@@ -581,6 +600,12 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
 :GraphemePart rdf:type owl:Class ;
               rdfs:label "grapheme part" ;
               <http://www.w3.org/2004/02/skos/core#definition> "A grapheme which is used as part of another grapheme" .
+
+
+###  http://www.purl.org/graphemon/GraphemeReading
+:GraphemeReading rdf:type owl:Class ;
+                 rdfs:label "grapheme reading" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "A reading of a grapheme" .
 
 
 ###  http://www.purl.org/graphemon/GraphemeSense
