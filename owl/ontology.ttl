@@ -31,6 +31,12 @@
 #    Datatypes
 #################################################################
 
+###  http://www.purl.org/graphemon/asciiTransliterationLiteral
+:asciiTransliterationLiteral rdf:type rdfs:Datatype ;
+                             rdfs:label "ASCII transliteration literal" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "A literal type which describes transliterations of graphemes in ASCII characters only" .
+
+
 ###  http://www.purl.org/graphemon/gottsteinLiteral
 :gottsteinLiteral rdf:type rdfs:Datatype ;
                   rdfs:label "Gottstein Literal" ;
@@ -45,6 +51,11 @@
 ###  http://www.purl.org/graphemon/svgLiteral
 :svgLiteral rdf:type rdfs:Datatype ;
             rdfs:label "SVG Literal" .
+
+
+###  http://www.purl.org/graphemon/unicodeTransliterationLiteral
+:unicodeTransliterationLiteral rdf:type rdfs:Datatype ;
+                               rdfs:label "Unicode tranlsliteration literal" .
 
 
 #################################################################
@@ -153,6 +164,14 @@ lemon:reference rdf:type owl:ObjectProperty ;
          <http://www.w3.org/2004/02/skos/core#definition> "Part of a grapheme representation which may be reused in other graphemes" .
 
 
+###  http://www.purl.org/graphemon/isComposedOf
+:isComposedOf rdf:type owl:ObjectProperty ;
+              rdfs:domain :GraphemeComposition ;
+              rdfs:range cidoc:TXP9_Grapheme ;
+              rdfs:label "is composed of" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Indicates an element of a graph composition" .
+
+
 ###  http://www.purl.org/graphemon/isGraphemeCognateOf
 :isGraphemeCognateOf rdf:type owl:ObjectProperty ;
                      rdfs:domain :GraphemeManifestation ;
@@ -215,6 +234,13 @@ lemon:reference rdf:type owl:ObjectProperty ;
       rdfs:range xsd:integer ;
       rdfs:label "abzl" ;
       <http://www.w3.org/2004/02/skos/core#definition> "Relates to an identifier in the mesopotamian sign dictionary" .
+
+
+###  http://www.purl.org/graphemon/altSignName
+:altSignName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :signName ;
+             rdfs:label "An alternative designation describing an individual grapheme" ,
+                        "alternative sign name" .
 
 
 ###  http://www.purl.org/graphemon/asPNG
@@ -514,6 +540,13 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
                     rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Collection> ;
                     rdfs:label "grapheme collection" ;
                     <http://www.w3.org/2004/02/skos/core#definition> "A collection of graphemes" .
+
+
+###  http://www.purl.org/graphemon/GraphemeComposition
+:GraphemeComposition rdf:type owl:Class ;
+                     rdfs:subClassOf :GraphemeManifestation ;
+                     rdfs:label "grapheme composition" ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "A composition of individual graphemes which is treated as a single entity in its respective languages" .
 
 
 ###  http://www.purl.org/graphemon/GraphemeDescriptionAtomicPart
