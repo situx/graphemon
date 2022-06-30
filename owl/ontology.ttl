@@ -391,6 +391,12 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
        <http://www.w3.org/2004/02/skos/core#definition> "Number in the dictionary Mesopotamisches Zeichenlexikon" .
 
 
+###  http://www.purl.org/graphemon/readingValue
+:readingValue rdf:type owl:DatatypeProperty ;
+              rdfs:label "reading value" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "The value of a reading which has been assigned to a character" .
+
+
 ###  http://www.purl.org/graphemon/signName
 :signName rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf :hasCuneiformIdentifier ;
