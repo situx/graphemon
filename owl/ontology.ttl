@@ -149,6 +149,14 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
           <http://www.w3.org/2004/02/skos/core#definition> "Relates a glyph or a glyph part of a color" .
 
 
+###  http://www.purl.org/graphemon/hasGraphemeReading
+:hasGraphemeReading rdf:type owl:ObjectProperty ;
+                    rdfs:domain cidoc:TXP9_Grapheme ,
+                                :GraphemeComposition ;
+                    rdfs:range :GraphemeReading ;
+                    rdfs:label "has grapheme reading" .
+
+
 ###  http://www.purl.org/graphemon/hasMaterial
 :hasMaterial rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :glyphAspectProperty ;
@@ -229,6 +237,12 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                       rdfs:range :GraphemeManifestation ;
                       rdfs:label "similarity link target" ;
                       <http://www.w3.org/2004/02/skos/core#definition> "The target of a similarity link" .
+
+
+###  http://www.purl.org/graphemon/variant
+:variant rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdfs:label "variant" .
 
 
 #################################################################
