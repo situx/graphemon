@@ -8,7 +8,7 @@
 @prefix lemon: <http://lemon-model.net/lemon#> .
 @base <http://www.purl.org/graphemon#> .
 
-<http://www.purl.org/graphemon#> rdf:type owl:Ontology ;
+<http://www.purl.org/graphemon> rdf:type owl:Ontology ;
                                   rdfs:label "Grapheme Model for Ontologies (Graphemon) Ontology" .
 
 #################################################################
