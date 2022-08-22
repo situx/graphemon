@@ -1,4 +1,4 @@
-@prefix : <http://www.purl.org/graphemon/> .
+@prefix : <http://www.purl.org/graphemon#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -6,9 +6,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cidoc: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix lemon: <http://lemon-model.net/lemon#> .
-@base <http://www.purl.org/graphemon/> .
+@base <http://www.purl.org/graphemon#> .
 
-<http://www.purl.org/graphemon/> rdf:type owl:Ontology ;
+<http://www.purl.org/graphemon#> rdf:type owl:Ontology ;
                                   rdfs:label "Grapheme Model for Ontologies (Graphemon) Ontology" .
 
 #################################################################
@@ -31,33 +31,33 @@
 #    Datatypes
 #################################################################
 
-###  http://www.purl.org/graphemon/asciiTransliterationLiteral
+###  http://www.purl.org/graphemon#asciiTransliterationLiteral
 :asciiTransliterationLiteral rdf:type rdfs:Datatype ;
                              rdfs:label "ASCII transliteration literal" ;
                              <http://www.w3.org/2004/02/skos/core#definition> "A literal type which describes transliterations of graphemes in ASCII characters only" .
 
 
-###  http://www.purl.org/graphemon/extendedGottsteinLiteral
+###  http://www.purl.org/graphemon#extendedGottsteinLiteral
 :extendedGottsteinLiteral rdf:type rdfs:Datatype .
 
 
-###  http://www.purl.org/graphemon/gottsteinLiteral
+###  http://www.purl.org/graphemon#gottsteinLiteral
 :gottsteinLiteral rdf:type rdfs:Datatype ;
                   rdfs:label "Gottstein Literal" ;
                   <http://www.w3.org/2004/02/skos/core#definition> "String literal type describing a cuneiform sign using its Gottstein code" .
 
 
-###  http://www.purl.org/graphemon/paleocodeLiteral
+###  http://www.purl.org/graphemon#paleocodeLiteral
 :paleocodeLiteral rdf:type rdfs:Datatype ;
                   <http://www.w3.org/2004/02/skos/core#definition> "String literal describing a cuneiform sign using the PaleoCodage encoding" .
 
 
-###  http://www.purl.org/graphemon/svgLiteral
+###  http://www.purl.org/graphemon#svgLiteral
 :svgLiteral rdf:type rdfs:Datatype ;
             rdfs:label "SVG Literal" .
 
 
-###  http://www.purl.org/graphemon/unicodeTransliterationLiteral
+###  http://www.purl.org/graphemon#unicodeTransliterationLiteral
 :unicodeTransliterationLiteral rdf:type rdfs:Datatype ;
                                rdfs:label "Unicode tranlsliteration literal" .
 
@@ -76,7 +76,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                       rdfs:label "depicted by" .
 
 
-###  http://www.purl.org/graphemon/above
+###  http://www.purl.org/graphemon#above
 :above rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf :directionProperty ;
        rdfs:domain :GraphemeAtomicPart ;
@@ -85,7 +85,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
        <http://www.w3.org/2004/02/skos/core#definition> "Property indicating that an atomic part is above another atomic part" .
 
 
-###  http://www.purl.org/graphemon/below
+###  http://www.purl.org/graphemon#below
 :below rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf :directionProperty ;
        rdfs:domain :GraphemeAtomicPart ;
@@ -94,7 +94,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
        <http://www.w3.org/2004/02/skos/core#definition> "Property indicating that an atomic part is below another atomic part" .
 
 
-###  http://www.purl.org/graphemon/directionProperty
+###  http://www.purl.org/graphemon#directionProperty
 :directionProperty rdf:type owl:ObjectProperty ;
                    rdfs:domain :GraphemeAtomicPart ;
                    rdfs:range :GraphemeAtomicPart ;
@@ -102,26 +102,26 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                    <http://www.w3.org/2004/02/skos/core#definition> "A property indicating the direction of a grapheme atomic part" .
 
 
-###  http://www.purl.org/graphemon/glyphAspectProperty
+###  http://www.purl.org/graphemon#glyphAspectProperty
 :glyphAspectProperty rdf:type owl:ObjectProperty ;
                      rdfs:label "glyph aspect property" .
 
 
-###  http://www.purl.org/graphemon/graphemeEtySource
+###  http://www.purl.org/graphemon#graphemeEtySource
 :graphemeEtySource rdf:type owl:ObjectProperty ;
                    rdfs:domain :GraphemeEtylink ;
                    rdfs:range :GraphemeManifestation ;
                    rdfs:label "grapheme etymology source" .
 
 
-###  http://www.purl.org/graphemon/graphemeEtyTarget
+###  http://www.purl.org/graphemon#graphemeEtyTarget
 :graphemeEtyTarget rdf:type owl:ObjectProperty ;
                    rdfs:domain :GraphemeEtylink ;
                    rdfs:range :GraphemeManifestation ;
                    rdfs:label "grapheme etymology target" .
 
 
-###  http://www.purl.org/graphemon/graphemeSense
+###  http://www.purl.org/graphemon#graphemeSense
 :graphemeSense rdf:type owl:ObjectProperty ;
                rdfs:domain :GraphemeAtomicPart ,
                            :GraphemeManifestation ,
@@ -131,7 +131,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                <http://www.w3.org/2004/02/skos/core#definition> "Relates a sense instance to a given grapheme" .
 
 
-###  http://www.purl.org/graphemon/hasAtomicPart
+###  http://www.purl.org/graphemon#hasAtomicPart
 :hasAtomicPart rdf:type owl:ObjectProperty ;
                rdfs:domain cidoc:TXP9_Grapheme ,
                            :GraphemePart ,
@@ -141,7 +141,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                <http://www.w3.org/2004/02/skos/core#definition> "Relates to an atomic part which is included in the current grapheme" .
 
 
-###  http://www.purl.org/graphemon/hasColor
+###  http://www.purl.org/graphemon#hasColor
 :hasColor rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :glyphAspectProperty ;
           rdfs:domain cidoc:TX6_Glyph ;
@@ -149,7 +149,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
           <http://www.w3.org/2004/02/skos/core#definition> "Relates a glyph or a glyph part of a color" .
 
 
-###  http://www.purl.org/graphemon/hasGraphemeReading
+###  http://www.purl.org/graphemon#hasGraphemeReading
 :hasGraphemeReading rdf:type owl:ObjectProperty ;
                     rdfs:domain cidoc:TXP9_Grapheme ,
                                 :GraphemeComposition ;
@@ -157,7 +157,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                     rdfs:label "has grapheme reading" .
 
 
-###  http://www.purl.org/graphemon/hasMaterial
+###  http://www.purl.org/graphemon#hasMaterial
 :hasMaterial rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :glyphAspectProperty ;
              rdfs:domain cidoc:TX6_Glyph ;
@@ -165,14 +165,14 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
              <http://www.w3.org/2004/02/skos/core#definition> "Definition of the material which was used to create a glyph representation" .
 
 
-###  http://www.purl.org/graphemon/hasMaterialAspect
+###  http://www.purl.org/graphemon#hasMaterialAspect
 :hasMaterialAspect rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :glyphAspectProperty ;
                    rdfs:label "has material aspect" ;
                    <http://www.w3.org/2004/02/skos/core#definition> "An aspect of the material of which the glyph is composed of" .
 
 
-###  http://www.purl.org/graphemon/hasPart
+###  http://www.purl.org/graphemon#hasPart
 :hasPart rdf:type owl:ObjectProperty ;
          rdfs:domain cidoc:TXP9_Grapheme ,
                      :GraphemeVariant ;
@@ -181,7 +181,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
          <http://www.w3.org/2004/02/skos/core#definition> "Part of a grapheme representation which may be reused in other graphemes" .
 
 
-###  http://www.purl.org/graphemon/isComposedOf
+###  http://www.purl.org/graphemon#isComposedOf
 :isComposedOf rdf:type owl:ObjectProperty ;
               rdfs:domain :GraphemeComposition ;
               rdfs:range cidoc:TXP9_Grapheme ;
@@ -189,7 +189,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
               <http://www.w3.org/2004/02/skos/core#definition> "Indicates an element of a graph composition" .
 
 
-###  http://www.purl.org/graphemon/isGraphemeCognateOf
+###  http://www.purl.org/graphemon#isGraphemeCognateOf
 :isGraphemeCognateOf rdf:type owl:ObjectProperty ;
                      rdfs:domain :GraphemeManifestation ;
                      rdfs:range :GraphemeManifestation ;
@@ -197,7 +197,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                      <http://www.w3.org/2004/02/skos/core#definition> "Relates a grapheme to its cognate grapheme" .
 
 
-###  http://www.purl.org/graphemon/leftOf
+###  http://www.purl.org/graphemon#leftOf
 :leftOf rdf:type owl:ObjectProperty ;
         rdfs:subPropertyOf :directionProperty ;
         rdfs:domain :GraphemeAtomicPart ;
@@ -206,7 +206,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
         <http://www.w3.org/2004/02/skos/core#definition> "Property indicating that an atomic part is left of another atomic part" .
 
 
-###  http://www.purl.org/graphemon/linkBasedOn
+###  http://www.purl.org/graphemon#linkBasedOn
 :linkBasedOn rdf:type owl:ObjectProperty ;
              rdfs:domain :SimilarityLink ;
              rdfs:range :SimilarityMetric ;
@@ -214,7 +214,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
              <http://www.w3.org/2004/02/skos/core#definition> "Metric or measurement a similarity link instance is based on" .
 
 
-###  http://www.purl.org/graphemon/rightOf
+###  http://www.purl.org/graphemon#rightOf
 :rightOf rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf :directionProperty ;
          rdfs:domain :GraphemeAtomicPart ;
@@ -223,7 +223,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
          <http://www.w3.org/2004/02/skos/core#definition> "Property indicating that an atomic part is right of another atomic part" .
 
 
-###  http://www.purl.org/graphemon/similarityLinkSource
+###  http://www.purl.org/graphemon#similarityLinkSource
 :similarityLinkSource rdf:type owl:ObjectProperty ;
                       rdfs:domain :GraphemeManifestation ;
                       rdfs:range :GraphemeManifestation ;
@@ -231,7 +231,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                       <http://www.w3.org/2004/02/skos/core#definition> "The source of a similarity link" .
 
 
-###  http://www.purl.org/graphemon/similarityLinkTarget
+###  http://www.purl.org/graphemon#similarityLinkTarget
 :similarityLinkTarget rdf:type owl:ObjectProperty ;
                       rdfs:domain :GraphemeManifestation ;
                       rdfs:range :GraphemeManifestation ;
@@ -239,7 +239,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                       <http://www.w3.org/2004/02/skos/core#definition> "The target of a similarity link" .
 
 
-###  http://www.purl.org/graphemon/variant
+###  http://www.purl.org/graphemon#variant
 :variant rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:label "variant" .
@@ -249,7 +249,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  http://www.purl.org/graphemon/abzl
+###  http://www.purl.org/graphemon#abzl
 :abzl rdf:type owl:DatatypeProperty ;
       rdfs:subPropertyOf :hasCuneiformIdentifier ;
       rdfs:domain cidoc:TXP9_Grapheme ,
@@ -259,21 +259,21 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
       <http://www.w3.org/2004/02/skos/core#definition> "Relates to an identifier in the mesopotamian sign dictionary" .
 
 
-###  http://www.purl.org/graphemon/altSignName
+###  http://www.purl.org/graphemon#altSignName
 :altSignName rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :signName ;
              rdfs:label "An alternative designation describing an individual grapheme" ,
                         "alternative sign name" .
 
 
-###  http://www.purl.org/graphemon/asPNG
+###  http://www.purl.org/graphemon#asPNG
 :asPNG rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf :hasImage ;
        rdfs:label "as PNG" ;
        <http://www.w3.org/2004/02/skos/core#definition> "Defines an PNG representation of a grapheme instance" .
 
 
-###  http://www.purl.org/graphemon/asSVG
+###  http://www.purl.org/graphemon#asSVG
 :asSVG rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf :hasImage ;
        rdfs:domain cidoc:TXP9_Grapheme ,
@@ -284,21 +284,21 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
        <http://www.w3.org/2004/02/skos/core#definition> "Defines an SVG representation of a grapheme instance" .
 
 
-###  http://www.purl.org/graphemon/hasCuneiformGraphemeDescription
+###  http://www.purl.org/graphemon#hasCuneiformGraphemeDescription
 :hasCuneiformGraphemeDescription rdf:type owl:DatatypeProperty ;
                                  rdfs:subPropertyOf :hasGraphemeDescription ;
                                  rdfs:label "has cuneiform grapheme description" ;
                                  <http://www.w3.org/2004/02/skos/core#definition> "A grapheme description for a cuneiform sign" .
 
 
-###  http://www.purl.org/graphemon/hasCuneiformIdentifier
+###  http://www.purl.org/graphemon#hasCuneiformIdentifier
 :hasCuneiformIdentifier rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :hasIdentifier ;
                         rdfs:label "has cuneiform identifier" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "An identifier which relates to a definition in a cuneiform dictionary or sign list" .
 
 
-###  http://www.purl.org/graphemon/hasExtendedGottsteinCode
+###  http://www.purl.org/graphemon#hasExtendedGottsteinCode
 :hasExtendedGottsteinCode rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf :hasGottsteinCode ;
                           rdfs:domain :GraphemeVariant ;
@@ -308,7 +308,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                           <http://www.w3.org/2004/02/skos/core#note> "An extended Gottstein description exposes the Winkelhaken as an extra character w" .
 
 
-###  http://www.purl.org/graphemon/hasGottsteinCode
+###  http://www.purl.org/graphemon#hasGottsteinCode
 :hasGottsteinCode rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :hasCuneiformGraphemeDescription ;
                   rdfs:domain :GraphemeVariant ;
@@ -317,13 +317,13 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                   <http://www.w3.org/2004/02/skos/core#definition> "A Gottstein code description of a cuneiform sign" .
 
 
-###  http://www.purl.org/graphemon/hasGraphemeDescription
+###  http://www.purl.org/graphemon#hasGraphemeDescription
 :hasGraphemeDescription rdf:type owl:DatatypeProperty ;
                         rdfs:label "has grapheme description" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "A description of a grapheme in a define character descripton system" .
 
 
-###  http://www.purl.org/graphemon/hasIdentifier
+###  http://www.purl.org/graphemon#hasIdentifier
 :hasIdentifier rdf:type owl:DatatypeProperty ;
                rdfs:domain cidoc:TXP9_Grapheme ,
                            :GraphemeVariant ;
@@ -332,12 +332,12 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                <http://www.w3.org/2004/02/skos/core#definition> "Relates a Grapheme to a String representation identifiying it in a particular context" .
 
 
-###  http://www.purl.org/graphemon/hasImage
+###  http://www.purl.org/graphemon#hasImage
 :hasImage rdf:type owl:DatatypeProperty ;
           rdfs:label "has image" .
 
 
-###  http://www.purl.org/graphemon/hasPaleoCode
+###  http://www.purl.org/graphemon#hasPaleoCode
 :hasPaleoCode rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf :hasCuneiformGraphemeDescription ;
               rdfs:domain :GraphemeVariant ;
@@ -345,7 +345,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
               rdfs:label "has PaleoCode" .
 
 
-###  http://www.purl.org/graphemon/hasUnicodeCodePoint
+###  http://www.purl.org/graphemon#hasUnicodeCodePoint
 :hasUnicodeCodePoint rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :hasIdentifier ;
                      rdfs:domain cidoc:TXP9_Grapheme ,
@@ -355,7 +355,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                      <http://www.w3.org/2004/02/skos/core#definition> "Relates a grapheme to a unicode code point which identifies it" .
 
 
-###  http://www.purl.org/graphemon/hasUnicodeRepresentation
+###  http://www.purl.org/graphemon#hasUnicodeRepresentation
 :hasUnicodeRepresentation rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf :hasIdentifier ;
                           rdfs:domain :GraphemeManifestation ;
@@ -363,14 +363,14 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                           rdfs:label "has unicode repesentation" .
 
 
-###  http://www.purl.org/graphemon/hethzl
+###  http://www.purl.org/graphemon#hethzl
 :hethzl rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf :hasCuneiformIdentifier ;
         rdfs:label "hethzl" ;
         <http://www.w3.org/2004/02/skos/core#definition> "Relates to an identifier in the hittite sign dictionary" .
 
 
-###  http://www.purl.org/graphemon/isCanonicalForm
+###  http://www.purl.org/graphemon#isCanonicalForm
 :isCanonicalForm rdf:type owl:DatatypeProperty ;
                  rdfs:domain :GraphemeVariant ;
                  rdfs:range xsd:boolean ;
@@ -378,7 +378,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                  <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether a grapheme variant is considered as a canonical form" .
 
 
-###  http://www.purl.org/graphemon/isDamaged
+###  http://www.purl.org/graphemon#isDamaged
 :isDamaged rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf owl:topDataProperty ;
            rdfs:domain cidoc:TX6_Glyph ;
@@ -387,7 +387,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
            <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether a glyph is damaged" .
 
 
-###  http://www.purl.org/graphemon/isErased
+###  http://www.purl.org/graphemon#isErased
 :isErased rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf owl:topDataProperty ;
           rdfs:range xsd:boolean ;
@@ -395,7 +395,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
           <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether a glyph representation is erased" .
 
 
-###  http://www.purl.org/graphemon/meszl
+###  http://www.purl.org/graphemon#meszl
 :meszl rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf :hasCuneiformIdentifier ;
        rdfs:domain cidoc:TXP9_Grapheme ,
@@ -405,13 +405,13 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
        <http://www.w3.org/2004/02/skos/core#definition> "Number in the dictionary Mesopotamisches Zeichenlexikon" .
 
 
-###  http://www.purl.org/graphemon/readingValue
+###  http://www.purl.org/graphemon#readingValue
 :readingValue rdf:type owl:DatatypeProperty ;
               rdfs:label "reading value" ;
               <http://www.w3.org/2004/02/skos/core#definition> "The value of a reading which has been assigned to a character" .
 
 
-###  http://www.purl.org/graphemon/signName
+###  http://www.purl.org/graphemon#signName
 :signName rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf :hasCuneiformIdentifier ;
           rdfs:range xsd:string ;
@@ -419,27 +419,27 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
           <http://www.w3.org/2004/02/skos/core#definition> "A designation describing an individual grapheme" .
 
 
-###  http://www.purl.org/graphemon/similarityLowerBound
+###  http://www.purl.org/graphemon#similarityLowerBound
 :similarityLowerBound rdf:type owl:DatatypeProperty ;
                       rdfs:range xsd:double ;
                       rdfs:label "similarity low bound" ;
                       <http://www.w3.org/2004/02/skos/core#definition> "The lower bound of a similarity measurement" .
 
 
-###  http://www.purl.org/graphemon/similarityUpperBound
+###  http://www.purl.org/graphemon#similarityUpperBound
 :similarityUpperBound rdf:type owl:DatatypeProperty ;
                       rdfs:label "similarity upper bound" ;
                       <http://www.w3.org/2004/02/skos/core#definition> "The upper bound of a similarity measurement" .
 
 
-###  http://www.purl.org/graphemon/slha
+###  http://www.purl.org/graphemon#slha
 :slha rdf:type owl:DatatypeProperty ;
       rdfs:subPropertyOf :hasCuneiformIdentifier ;
       rdfs:label "slha" ;
       <http://www.w3.org/2004/02/skos/core#definition> "Deimel number of the Sumerian lexicon (SL) or number from the Handbuch Assur (HA)" .
 
 
-###  http://www.purl.org/graphemon/upperBoundMostSimilar
+###  http://www.purl.org/graphemon#upperBoundMostSimilar
 :upperBoundMostSimilar rdf:type owl:DatatypeProperty ;
                        rdfs:range xsd:boolean ;
                        rdfs:label "upper bound most similar" .
@@ -489,48 +489,48 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
                     <http://www.w3.org/2004/02/skos/core#definition> "A standardized form of representation of a grapheme" .
 
 
-###  http://www.purl.org/graphemon/ChineseCharacterStroke
+###  http://www.purl.org/graphemon#ChineseCharacterStroke
 :ChineseCharacterStroke rdf:type owl:Class ;
                         rdfs:subClassOf :Stroketyped ;
                         rdfs:label "Chinese character stroke" ;
                         <http://www.w3.org/2004/02/skos/core#definition> "Strokes used to draw Chinese characters" .
 
 
-###  http://www.purl.org/graphemon/CuneiformWedge
+###  http://www.purl.org/graphemon#CuneiformWedge
 :CuneiformWedge rdf:type owl:Class ;
                 rdfs:subClassOf :Stroketyped ;
                 rdfs:label "cuneiform wedge" ;
                 <http://www.w3.org/2004/02/skos/core#definition> "Wedges used to write cuneiform signs" .
 
 
-###  http://www.purl.org/graphemon/EgyptianHieroglyphicAtomicPart
+###  http://www.purl.org/graphemon#EgyptianHieroglyphicAtomicPart
 :EgyptianHieroglyphicAtomicPart rdf:type owl:Class ;
                                 rdfs:subClassOf :ideographic-typed ;
                                 rdfs:label "egyptian hieroglyphic atomic part" ;
                                 <http://www.w3.org/2004/02/skos/core#definition> "An undividable part of an egyptian hieroglyphic which is used to compose other hieroglyphics" .
 
 
-###  http://www.purl.org/graphemon/GlyphCollection
+###  http://www.purl.org/graphemon#GlyphCollection
 :GlyphCollection rdf:type owl:Class ;
                  rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Collection> ;
                  rdfs:label "glyph collection" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A collection of glyphs" .
 
 
-###  http://www.purl.org/graphemon/GottsteinSystem
+###  http://www.purl.org/graphemon#GottsteinSystem
 :GottsteinSystem rdf:type owl:Class ;
                  rdfs:subClassOf :GraphemeDescriptionSystem ;
                  rdfs:label "Gottstein system encoding" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "Gottstein encoding system for cuneiform signs" .
 
 
-###  http://www.purl.org/graphemon/GottsteinWedgeType
+###  http://www.purl.org/graphemon#GottsteinWedgeType
 :GottsteinWedgeType rdf:type owl:Class ;
                     rdfs:subClassOf :GraphemeDescriptionAtomicPart ;
                     rdfs:label "Gottstein Wedge Type" .
 
 
-###  http://www.purl.org/graphemon/Gottstein_A
+###  http://www.purl.org/graphemon#Gottstein_A
 :Gottstein_A rdf:type owl:Class ;
              rdfs:subClassOf :GottsteinWedgeType ;
              rdfs:label "Gottstein Wedge Type A" ;
@@ -538,7 +538,7 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
              <http://www.w3.org/2004/02/skos/core#note> "Vertical wedge" .
 
 
-###  http://www.purl.org/graphemon/Gottstein_B
+###  http://www.purl.org/graphemon#Gottstein_B
 :Gottstein_B rdf:type owl:Class ;
              rdfs:subClassOf :GottsteinWedgeType ;
              rdfs:label "Gottstein Wedge Type B" ;
@@ -546,21 +546,21 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
              <http://www.w3.org/2004/02/skos/core#note> "Horizontal wedge" .
 
 
-###  http://www.purl.org/graphemon/Gottstein_C
+###  http://www.purl.org/graphemon#Gottstein_C
 :Gottstein_C rdf:type owl:Class ;
              rdfs:subClassOf :GottsteinWedgeType ;
              rdfs:label "Gottstein Wedge Type C" ;
              <http://www.w3.org/2004/02/skos/core#definition> "Wedge Type C as defined by the Gottstein system" .
 
 
-###  http://www.purl.org/graphemon/Gottstein_Wedget_Type_D
+###  http://www.purl.org/graphemon#Gottstein_Wedget_Type_D
 :Gottstein_Wedget_Type_D rdf:type owl:Class ;
                          rdfs:subClassOf :GottsteinWedgeType ;
                          rdfs:label "Gottstein Wedge Type D" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Wedge Type D as defined by the Gottstein system" .
 
 
-###  http://www.purl.org/graphemon/GraphemeAtomicPart
+###  http://www.purl.org/graphemon#GraphemeAtomicPart
 :GraphemeAtomicPart rdf:type owl:Class ;
                     rdfs:subClassOf :GraphemePart ;
                     rdfs:label "grapheme atomic part" ;
@@ -568,133 +568,133 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
                     <http://www.w3.org/2004/02/skos/core#example> "A stroke in a Chinese or Japanese character" .
 
 
-###  http://www.purl.org/graphemon/GraphemeCognate
+###  http://www.purl.org/graphemon#GraphemeCognate
 :GraphemeCognate rdf:type owl:Class ;
                  rdfs:label "grapheme cognate" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A cognate between graphemes" .
 
 
-###  http://www.purl.org/graphemon/GraphemeCollection
+###  http://www.purl.org/graphemon#GraphemeCollection
 :GraphemeCollection rdf:type owl:Class ;
                     rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Collection> ;
                     rdfs:label "grapheme collection" ;
                     <http://www.w3.org/2004/02/skos/core#definition> "A collection of graphemes" .
 
 
-###  http://www.purl.org/graphemon/GraphemeComposition
+###  http://www.purl.org/graphemon#GraphemeComposition
 :GraphemeComposition rdf:type owl:Class ;
                      rdfs:subClassOf :GraphemeManifestation ;
                      rdfs:label "grapheme composition" ;
                      <http://www.w3.org/2004/02/skos/core#definition> "A composition of individual graphemes which is treated as a single entity in its respective languages" .
 
 
-###  http://www.purl.org/graphemon/GraphemeDescriptionAtomicPart
+###  http://www.purl.org/graphemon#GraphemeDescriptionAtomicPart
 :GraphemeDescriptionAtomicPart rdf:type owl:Class ;
                                rdfs:label "grapheme description atomic part" .
 
 
-###  http://www.purl.org/graphemon/GraphemeDescriptionSystem
+###  http://www.purl.org/graphemon#GraphemeDescriptionSystem
 :GraphemeDescriptionSystem rdf:type owl:Class ;
                            rdfs:label "grapheme description system" ;
                            <http://www.w3.org/2004/02/skos/core#definition> "A description system to describe features of graphemes" .
 
 
-###  http://www.purl.org/graphemon/GraphemeEtylink
+###  http://www.purl.org/graphemon#GraphemeEtylink
 :GraphemeEtylink rdf:type owl:Class ;
                  rdfs:label "grapheme etylink" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "An etymological link between two graphemes or grapheme variants" .
 
 
-###  http://www.purl.org/graphemon/GraphemeEtymon
+###  http://www.purl.org/graphemon#GraphemeEtymon
 :GraphemeEtymon rdf:type owl:Class ;
                 rdfs:label "grapheme etymon" .
 
 
-###  http://www.purl.org/graphemon/GraphemeManifestation
+###  http://www.purl.org/graphemon#GraphemeManifestation
 :GraphemeManifestation rdf:type owl:Class ;
                        rdfs:label "grapheme manifestation" ;
                        <http://www.w3.org/2004/02/skos/core#definition> "The manifestation of a grapheme in a written or non-written form" .
 
 
-###  http://www.purl.org/graphemon/GraphemePart
+###  http://www.purl.org/graphemon#GraphemePart
 :GraphemePart rdf:type owl:Class ;
               rdfs:label "grapheme part" ;
               <http://www.w3.org/2004/02/skos/core#definition> "A grapheme which is used as part of another grapheme" .
 
 
-###  http://www.purl.org/graphemon/GraphemeReading
+###  http://www.purl.org/graphemon#GraphemeReading
 :GraphemeReading rdf:type owl:Class ;
                  rdfs:label "grapheme reading" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A reading of a grapheme" .
 
 
-###  http://www.purl.org/graphemon/GraphemeSense
+###  http://www.purl.org/graphemon#GraphemeSense
 :GraphemeSense rdf:type owl:Class ;
                rdfs:label "grapheme sense" ;
                <http://www.w3.org/2004/02/skos/core#definition> "Sense of a grapheme, which may or may not be independent of the sense of words using this grapheme" .
 
 
-###  http://www.purl.org/graphemon/GraphemeVariant
+###  http://www.purl.org/graphemon#GraphemeVariant
 :GraphemeVariant rdf:type owl:Class ;
                  rdfs:subClassOf cidoc:TXP9_Grapheme ;
                  rdfs:label "grapheme variant" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A variant of a grapheme which is distinguished by a set of criteria, usually varying semantics or shape from a canonical grapheme" .
 
 
-###  http://www.purl.org/graphemon/GraphemeVariantCollection
+###  http://www.purl.org/graphemon#GraphemeVariantCollection
 :GraphemeVariantCollection rdf:type owl:Class ;
                            rdfs:subClassOf :GraphemeCollection ;
                            rdfs:label "grapheme variant collection" ;
                            <http://www.w3.org/2004/02/skos/core#definition> "A collection of grapheme variants" .
 
 
-###  http://www.purl.org/graphemon/ImageBasedSimilarityLink
+###  http://www.purl.org/graphemon#ImageBasedSimilarityLink
 :ImageBasedSimilarityLink rdf:type owl:Class ;
                           rdfs:subClassOf :SimilarityLink ;
                           rdfs:label "image based similarity link" ;
                           <http://www.w3.org/2004/02/skos/core#definition> "A similarity link which is based on an image similarity metric" .
 
 
-###  http://www.purl.org/graphemon/ImageBasedSimilarityMetric
+###  http://www.purl.org/graphemon#ImageBasedSimilarityMetric
 :ImageBasedSimilarityMetric rdf:type owl:Class ;
                             rdfs:subClassOf :SimilarityMetric ;
                             rdfs:label "image based similarity metric" .
 
 
-###  http://www.purl.org/graphemon/JapaneseCharacterStroke
+###  http://www.purl.org/graphemon#JapaneseCharacterStroke
 :JapaneseCharacterStroke rdf:type owl:Class ;
                          rdfs:subClassOf :ChineseCharacterStroke ;
                          rdfs:label "Kanji character stroke" ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Strokes used to write Chinese characters used in the Japanese language" .
 
 
-###  http://www.purl.org/graphemon/LexicalFormOccurence
+###  http://www.purl.org/graphemon#LexicalFormOccurence
 :LexicalFormOccurence rdf:type owl:Class ;
                       rdfs:label "lexical form occurrence" ;
                       <http://www.w3.org/2004/02/skos/core#definition> "An occurrence of a lexical form linked to its grapheme composition" .
 
 
-###  http://www.purl.org/graphemon/OghamSignStroke
+###  http://www.purl.org/graphemon#OghamSignStroke
 :OghamSignStroke rdf:type owl:Class ;
                  rdfs:subClassOf :Stroketyped ;
                  rdfs:label "Ogham sign stroke" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "Stroke as a central component of the signs of the Ogham language" .
 
 
-###  http://www.purl.org/graphemon/PaleoCodageDescriptionAtomicPart
+###  http://www.purl.org/graphemon#PaleoCodageDescriptionAtomicPart
 :PaleoCodageDescriptionAtomicPart rdf:type owl:Class ;
                                   rdfs:subClassOf :GraphemeDescriptionAtomicPart ;
                                   rdfs:label "PaleoCodage Wedge Type" .
 
 
-###  http://www.purl.org/graphemon/PaleoCodageEncoding
+###  http://www.purl.org/graphemon#PaleoCodageEncoding
 :PaleoCodageEncoding rdf:type owl:Class ;
                      rdfs:subClassOf :GraphemeDescriptionSystem ;
                      rdfs:label "PaleoCodage encoding" ;
                      <http://www.w3.org/2004/02/skos/core#definition> "PaleoCodage encoding system for cuneiform signs" .
 
 
-###  http://www.purl.org/graphemon/PaleoCode_A
+###  http://www.purl.org/graphemon#PaleoCode_A
 :PaleoCode_A rdf:type owl:Class ;
              rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
              rdfs:label "PaleoCodage Wedge Type A" ;
@@ -702,94 +702,94 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
              <http://www.w3.org/2004/02/skos/core#note> "Vertical wedge" .
 
 
-###  http://www.purl.org/graphemon/PaleoCode_B
+###  http://www.purl.org/graphemon#PaleoCode_B
 :PaleoCode_B rdf:type owl:Class ;
              rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
              rdfs:label "PaleoCodage Wedge Type B" ;
              <http://www.w3.org/2004/02/skos/core#note> "Horizontal wedge" .
 
 
-###  http://www.purl.org/graphemon/PaleoCode_C
+###  http://www.purl.org/graphemon#PaleoCode_C
 :PaleoCode_C rdf:type owl:Class ;
              rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
              rdfs:label "PaleoCodage Wedge Type C" .
 
 
-###  http://www.purl.org/graphemon/PaleoCode_D
+###  http://www.purl.org/graphemon#PaleoCode_D
 :PaleoCode_D rdf:type owl:Class ;
              rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
              rdfs:label "PaleoCodage Wedge Type D" .
 
 
-###  http://www.purl.org/graphemon/PaleoCode_E
+###  http://www.purl.org/graphemon#PaleoCode_E
 :PaleoCode_E rdf:type owl:Class ;
              rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
              rdfs:label "PaleoCodage Wedge Type E" .
 
 
-###  http://www.purl.org/graphemon/PaleoCode_F
+###  http://www.purl.org/graphemon#PaleoCode_F
 :PaleoCode_F rdf:type owl:Class ;
              rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
              rdfs:label "PaleoCodage Wedge Type F" .
 
 
-###  http://www.purl.org/graphemon/PaleoCode_W
+###  http://www.purl.org/graphemon#PaleoCode_W
 :PaleoCode_W rdf:type owl:Class ;
              rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
              rdfs:label "PaleoCodage Wedge Type W" ;
              <http://www.w3.org/2004/02/skos/core#note> "Winkelhaken wedge" .
 
 
-###  http://www.purl.org/graphemon/PaleoCode_X
+###  http://www.purl.org/graphemon#PaleoCode_X
 :PaleoCode_X rdf:type owl:Class ;
              rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
              rdfs:label "PaleoCodage Wedge Type X" .
 
 
-###  http://www.purl.org/graphemon/PaleoCode_Y
+###  http://www.purl.org/graphemon#PaleoCode_Y
 :PaleoCode_Y rdf:type owl:Class ;
              rdfs:subClassOf :PaleoCodageDescriptionAtomicPart ;
              rdfs:label "PaleoCodage Wedge Type Y" .
 
 
-###  http://www.purl.org/graphemon/SimilarityLink
+###  http://www.purl.org/graphemon#SimilarityLink
 :SimilarityLink rdf:type owl:Class ;
                 rdfs:label "similarity link" ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A linkage of similarity between two entities based on a given similarity metric" .
 
 
-###  http://www.purl.org/graphemon/SimilarityMetric
+###  http://www.purl.org/graphemon#SimilarityMetric
 :SimilarityMetric rdf:type owl:Class ;
                   rdfs:label "similarity metric" .
 
 
-###  http://www.purl.org/graphemon/StringbasedSimilarityLink
+###  http://www.purl.org/graphemon#StringbasedSimilarityLink
 :StringbasedSimilarityLink rdf:type owl:Class ;
                            rdfs:subClassOf :SimilarityLink ;
                            rdfs:label "string based similarity link" ;
                            <http://www.w3.org/2004/02/skos/core#definition> "A similarity link which base is a String similarity metric" .
 
 
-###  http://www.purl.org/graphemon/StringbasedSimilarityMetric
+###  http://www.purl.org/graphemon#StringbasedSimilarityMetric
 :StringbasedSimilarityMetric rdf:type owl:Class ;
                              rdfs:subClassOf :SimilarityMetric ;
                              rdfs:label "string based similarity metric" .
 
 
-###  http://www.purl.org/graphemon/Stroketyped
+###  http://www.purl.org/graphemon#Stroketyped
 :Stroketyped rdf:type owl:Class ;
              rdfs:subClassOf :GraphemeAtomicPart ;
              rdfs:label "stroke-typed" .
 
 
-###  http://www.purl.org/graphemon/WordOccurence
+###  http://www.purl.org/graphemon#WordOccurence
 :WordOccurence rdf:type owl:Class ;
                rdfs:subClassOf :LexicalFormOccurence ;
                rdfs:label "word form occurence" ;
                <http://www.w3.org/2004/02/skos/core#definition> "An occurence of a word form linked to its grapheme composition" .
 
 
-###  http://www.purl.org/graphemon/ideographic-typed
+###  http://www.purl.org/graphemon#ideographic-typed
 :ideographic-typed rdf:type owl:Class ;
                    rdfs:subClassOf :GraphemeAtomicPart ;
                    rdfs:label "ideographic typed atomic part" .
