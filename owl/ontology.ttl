@@ -6,10 +6,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cidoc: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix lemon: <http://lemon-model.net/lemon#> .
-@base <http://www.purl.org/graphemon#> .
+@base <http://www.purl.org/graphemon> .
 
 <http://www.purl.org/graphemon> rdf:type owl:Ontology ;
-                                  rdfs:label "Grapheme Model for Ontologies (Graphemon) Ontology" .
+                                 rdfs:label "Grapheme Model for Ontologies (Graphemon) Ontology" .
 
 #################################################################
 #    Annotation properties
@@ -37,6 +37,12 @@
                              <http://www.w3.org/2004/02/skos/core#definition> "A literal type which describes transliterations of graphemes in ASCII characters only" .
 
 
+###  http://www.purl.org/graphemon#cssLiteral
+:cssLiteral rdf:type rdfs:Datatype ;
+            rdfs:label "CSS Literal" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "A CSS literal which may be used to describe glyph properties" .
+
+
 ###  http://www.purl.org/graphemon#extendedGottsteinLiteral
 :extendedGottsteinLiteral rdf:type rdfs:Datatype .
 
@@ -49,6 +55,7 @@
 
 ###  http://www.purl.org/graphemon#paleocodeLiteral
 :paleocodeLiteral rdf:type rdfs:Datatype ;
+                  rdfs:label "PaleoCode Literal" ;
                   <http://www.w3.org/2004/02/skos/core#definition> "String literal describing a cuneiform sign using the PaleoCodage encoding" .
 
 
@@ -59,7 +66,7 @@
 
 ###  http://www.purl.org/graphemon#unicodeTransliterationLiteral
 :unicodeTransliterationLiteral rdf:type rdfs:Datatype ;
-                               rdfs:label "Unicode tranlsliteration literal" .
+                               rdfs:label "Unicode transliteration literal" .
 
 
 #################################################################
@@ -239,10 +246,18 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                       <http://www.w3.org/2004/02/skos/core#definition> "The target of a similarity link" .
 
 
+###  http://www.purl.org/graphemon#timeperiod
+:timeperiod rdf:type owl:ObjectProperty ;
+            rdfs:label "time period" .
+
+
 ###  http://www.purl.org/graphemon#variant
 :variant rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
-         rdfs:label "variant" .
+         rdfs:domain cidoc:TXP9_Grapheme ;
+         rdfs:range :GraphemeVariant ;
+         rdfs:label "variant" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Links a grapheme to its grapheme variant" .
 
 
 #################################################################
