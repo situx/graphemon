@@ -188,6 +188,18 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
          <http://www.w3.org/2004/02/skos/core#definition> "Part of a grapheme representation which may be reused in other graphemes" .
 
 
+###  http://www.purl.org/graphemon#hasSource
+:hasSource rdf:type owl:ObjectProperty ;
+           rdfs:label "has source" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Defines the source of an etymological relation" .
+
+
+###  http://www.purl.org/graphemon#hasTarget
+:hasTarget rdf:type owl:ObjectProperty ;
+           rdfs:label "has target" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Defines the target of an etymological relation" .
+
+
 ###  http://www.purl.org/graphemon#isComposedOf
 :isComposedOf rdf:type owl:ObjectProperty ;
               rdfs:domain :GraphemeComposition ;
@@ -612,6 +624,13 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
 :GraphemeDescriptionSystem rdf:type owl:Class ;
                            rdfs:label "grapheme description system" ;
                            <http://www.w3.org/2004/02/skos/core#definition> "A description system to describe features of graphemes" .
+
+
+###  http://www.purl.org/graphemon#GraphemeEtyInheritanceLink
+:GraphemeEtyInheritanceLink rdf:type owl:Class ;
+                            rdfs:subClassOf :GraphemeEtylink ;
+                            rdfs:label "grapheme ety inheritance link" ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "An etymological link between two graphemes denoting inheritance" .
 
 
 ###  http://www.purl.org/graphemon#GraphemeEtylink
