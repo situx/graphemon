@@ -296,6 +296,7 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
 ###  http://www.purl.org/graphemon#asPNG
 :asPNG rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf :hasImage ;
+       rdfs:range xsd:anyURI ;
        rdfs:label "as PNG" ;
        <http://www.w3.org/2004/02/skos/core#definition> "Defines an PNG representation of a grapheme instance" .
 
@@ -306,7 +307,8 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
        rdfs:domain cidoc:TXP9_Grapheme ,
                    :GraphemeAtomicPart ,
                    :GraphemePart ;
-       rdfs:range :svgLiteral ;
+       rdfs:range :svgLiteral ,
+                  xsd:anyURI ;
        rdfs:label "as SVG" ;
        <http://www.w3.org/2004/02/skos/core#definition> "Defines an SVG representation of a grapheme instance" .
 
@@ -361,7 +363,18 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
 
 ###  http://www.purl.org/graphemon#hasImage
 :hasImage rdf:type owl:DatatypeProperty ;
-          rdfs:label "has image" .
+          rdfs:subPropertyOf :hasMedia ;
+          rdfs:range xsd:anyURI ;
+          rdfs:label "has image" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Relates a grapheme representation to a media representation in form of an image" .
+
+
+###  http://www.purl.org/graphemon#hasMedia
+:hasMedia rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:range xsd:anyURI ;
+          rdfs:label "has media" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Relates a grapheme manifestation to a media representation" .
 
 
 ###  http://www.purl.org/graphemon#hasPaleoCode
@@ -388,6 +401,14 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                           rdfs:domain :GraphemeManifestation ;
                           rdfs:range xsd:string ;
                           rdfs:label "has unicode repesentation" .
+
+
+###  http://www.purl.org/graphemon#hasVideo
+:hasVideo rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :hasMedia ;
+          rdfs:range xsd:anyURI ;
+          rdfs:label "has video" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Relates a grapheme representation to a media representation in the form of a video" .
 
 
 ###  http://www.purl.org/graphemon#hethzl
