@@ -729,6 +729,13 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
                       <http://www.w3.org/2004/02/skos/core#definition> "An occurrence of a lexical form linked to its grapheme composition" .
 
 
+###  http://www.purl.org/graphemon#Movement
+:Movement rdf:type owl:Class ;
+          rdfs:subClassOf :GraphemeManifestation ;
+          rdfs:label "movement" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "A movement describing a word or letter in a sign language" .
+
+
 ###  http://www.purl.org/graphemon#OghamSignStroke
 :OghamSignStroke rdf:type owl:Class ;
                  rdfs:subClassOf :Stroketyped ;
