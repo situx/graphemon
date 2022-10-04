@@ -109,6 +109,20 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                    <http://www.w3.org/2004/02/skos/core#definition> "A property indicating the direction of a grapheme atomic part" .
 
 
+###  http://www.purl.org/graphemon#downleft
+:downleft rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :directionProperty ;
+          rdfs:label "down left" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Property indicating that an atomic part is below left another atomic part" .
+
+
+###  http://www.purl.org/graphemon#downright
+:downright rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :directionProperty ;
+           rdfs:label "down right" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Property indicating that an atomic part is below right another atomic part" .
+
+
 ###  http://www.purl.org/graphemon#glyphAspectProperty
 :glyphAspectProperty rdf:type owl:ObjectProperty ;
                      rdfs:label "glyph aspect property" .
@@ -208,12 +222,84 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
               <http://www.w3.org/2004/02/skos/core#definition> "Indicates an element of a graph composition" .
 
 
+###  http://www.purl.org/graphemon#isDescribedAsGeneralizationOf
+:isDescribedAsGeneralizationOf rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :isGeneralizationOf ;
+                               rdfs:label "is described as generalization of" ;
+                               <http://www.w3.org/2004/02/skos/core#definition> "States that an external source relates this grapheme part as the generalization of another grapheme" .
+
+
+###  http://www.purl.org/graphemon#isDescribedAsMergedPartOf
+:isDescribedAsMergedPartOf rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :isMergedPartOf ;
+                           rdfs:label "is described as merged part of" ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "States that the subject is described as  merged part of the object and another grapheme by another source" .
+
+
+###  http://www.purl.org/graphemon#isDescribedAsModifiedPartOf
+:isDescribedAsModifiedPartOf rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :isModifiedPartOf ;
+                             rdfs:label "is described as modified part of" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "States that an external source describes the subject to be a modified part of the object" .
+
+
+###  http://www.purl.org/graphemon#isDescribedAsSimplificationOf
+:isDescribedAsSimplificationOf rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :isSimplificationOf ;
+                               rdfs:label "is described as simplification of" ;
+                               <http://www.w3.org/2004/02/skos/core#definition> "States that the object is described as a simplified version of the subject by another source" .
+
+
+###  http://www.purl.org/graphemon#isDescribedToBePartOf
+:isDescribedToBePartOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :isPartOf ;
+                       rdfs:label "is described to be part of" ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "States that the subject is described to be part of the object by an external resource" .
+
+
+###  http://www.purl.org/graphemon#isGeneralizationOf
+:isGeneralizationOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :relationProperty ;
+                    rdfs:label "is generalization of" ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "States that one grapheme is a generalized version of the other" .
+
+
 ###  http://www.purl.org/graphemon#isGraphemeCognateOf
 :isGraphemeCognateOf rdf:type owl:ObjectProperty ;
                      rdfs:domain :GraphemeManifestation ;
                      rdfs:range :GraphemeManifestation ;
                      rdfs:label "is grapheme cognate of" ;
                      <http://www.w3.org/2004/02/skos/core#definition> "Relates a grapheme to its cognate grapheme" .
+
+
+###  http://www.purl.org/graphemon#isMergedPartOf
+:isMergedPartOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :relationProperty ;
+                rdfs:label "is merged part of" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "States that the subject is part of the object, but merged with another grapheme" .
+
+
+###  http://www.purl.org/graphemon#isModifiedPartOf
+:isModifiedPartOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :relationProperty ;
+                  rdfs:label "is modified part of" ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "States that the subject is a modified part of the object of this property" .
+
+
+###  http://www.purl.org/graphemon#isPartOf
+:isPartOf rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :relationProperty ;
+          rdfs:domain cidoc:TXP9_Grapheme ;
+          rdfs:range cidoc:TXP9_Grapheme ;
+          rdfs:label "is part of" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Indicates that the subject is part of the object" .
+
+
+###  http://www.purl.org/graphemon#isSimplificationOf
+:isSimplificationOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :relationProperty ;
+                    rdfs:label "is simplification of" ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "States that the object is a simplification of the subject" .
 
 
 ###  http://www.purl.org/graphemon#leftOf
@@ -231,6 +317,12 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
              rdfs:range :SimilarityMetric ;
              rdfs:label "link based on" ;
              <http://www.w3.org/2004/02/skos/core#definition> "Metric or measurement a similarity link instance is based on" .
+
+
+###  http://www.purl.org/graphemon#relationProperty
+:relationProperty rdf:type owl:ObjectProperty ;
+                  rdfs:label "relation property" ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "A property that relates a grapheme (part) to another grapheme (part)" .
 
 
 ###  http://www.purl.org/graphemon#rightOf
@@ -261,6 +353,20 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
 ###  http://www.purl.org/graphemon#timeperiod
 :timeperiod rdf:type owl:ObjectProperty ;
             rdfs:label "time period" .
+
+
+###  http://www.purl.org/graphemon#upperleft
+:upperleft rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :directionProperty ;
+           rdfs:label "upper left" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Property indicating that an atomic part is upper left another atomic part" .
+
+
+###  http://www.purl.org/graphemon#upperright
+:upperright rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :directionProperty ;
+            rdfs:label "Property indicating that an atomic part is upper right of another atomic part" ,
+                       "upper right" .
 
 
 ###  http://www.purl.org/graphemon#variant
@@ -311,6 +417,12 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
                   xsd:anyURI ;
        rdfs:label "as SVG" ;
        <http://www.w3.org/2004/02/skos/core#definition> "Defines an SVG representation of a grapheme instance" .
+
+
+###  http://www.purl.org/graphemon#atomicPartDescription
+:atomicPartDescription rdf:type owl:DatatypeProperty ;
+                       rdfs:label "atomic part property" ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "A property that describes attributes of an atomic part" .
 
 
 ###  http://www.purl.org/graphemon#hasCuneiformGraphemeDescription
@@ -411,6 +523,13 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
           <http://www.w3.org/2004/02/skos/core#definition> "Relates a grapheme representation to a media representation in the form of a video" .
 
 
+###  http://www.purl.org/graphemon#headColor
+:headColor rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :atomicPartDescription ;
+           rdfs:label "head color" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Describes the color of a head of a cuneiform wedge" .
+
+
 ###  http://www.purl.org/graphemon#hethzl
 :hethzl rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf :hasCuneiformIdentifier ;
@@ -443,6 +562,14 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
           <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether a glyph representation is erased" .
 
 
+###  http://www.purl.org/graphemon#isHeadFilled
+:isHeadFilled rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :atomicPartDescription ;
+              rdfs:range xsd:boolean ;
+              rdfs:label "is head filled" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Indicates if the head of a cuneiform wedge is filled or empty" .
+
+
 ###  http://www.purl.org/graphemon#meszl
 :meszl rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf :hasCuneiformIdentifier ;
@@ -451,6 +578,13 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
        rdfs:range xsd:integer ;
        rdfs:label "meszl" ;
        <http://www.w3.org/2004/02/skos/core#definition> "Number in the dictionary Mesopotamisches Zeichenlexikon" .
+
+
+###  http://www.purl.org/graphemon#partStyle
+:partStyle rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :atomicPartDescription ;
+           rdfs:label "part style" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Describes the style of an atomic part by providing a style description" .
 
 
 ###  http://www.purl.org/graphemon#readingValue
@@ -485,6 +619,13 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
       rdfs:subPropertyOf :hasCuneiformIdentifier ;
       rdfs:label "slha" ;
       <http://www.w3.org/2004/02/skos/core#definition> "Deimel number of the Sumerian lexicon (SL) or number from the Handbuch Assur (HA)" .
+
+
+###  http://www.purl.org/graphemon#strokeColor
+:strokeColor rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :atomicPartDescription ;
+             rdfs:label "stroke color" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Defines the color of a stroke of a cuneiform wedge" .
 
 
 ###  http://www.purl.org/graphemon#upperBoundMostSimilar
