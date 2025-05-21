@@ -639,18 +639,18 @@ cidoc:P62_depicted_by rdf:type owl:ObjectProperty ;
 #################################################################
 
 ###  http://lemon-model.net/lemon#LexialEntry
-lemon:LexialEntry rdf:type owl:Class ;
-                  rdfs:label "lexical entry" .
+lemon:LexicalEntry rdf:type owl:Class ;
+                  rdfs:label "Lexical entry" .
 
 
 ###  http://lemon-model.net/lemon#LexicalForm
 lemon:LexicalForm rdf:type owl:Class ;
-                  rdfs:label "lexical form" .
+                  rdfs:label "Lexical form" .
 
 
 ###  http://lemon-model.net/lemon#LexicalSense
 lemon:LexicalSense rdf:type owl:Class ;
-                   rdfs:label "sense" .
+                   rdfs:label "Sense" .
 
 
 ###  http://lemon-model.net/lemon#Lexicon
@@ -661,20 +661,20 @@ lemon:Lexicon rdf:type owl:Class ;
 ###  http://lemon-model.net/lemon#Word
 lemon:Word rdf:type owl:Class ;
            rdfs:subClassOf lemon:LexicalForm ;
-           rdfs:label "word form" ;
+           rdfs:label "Word form" ;
            <http://www.w3.org/2004/02/skos/core#definition> "A grammatical form of a word" .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/TX6_Glyph
 cidoc:TX6_Glyph rdf:type owl:Class ;
-                rdfs:label "glyph" ;
+                rdfs:label "Glyph" ;
                 <http://www.w3.org/2004/02/skos/core#definition> "The physical manifestation of a grapheme" .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/TXP9_Grapheme
 cidoc:TXP9_Grapheme rdf:type owl:Class ;
                     rdfs:subClassOf :GraphemeManifestation ;
-                    rdfs:label "grapheme" ;
+                    rdfs:label "Grapheme" ;
                     <http://www.w3.org/2004/02/skos/core#definition> "A standardized form of representation of a grapheme" .
 
 
@@ -688,21 +688,21 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
 ###  http://www.purl.org/graphemon#CuneiformWedge
 :CuneiformWedge rdf:type owl:Class ;
                 rdfs:subClassOf :Stroketyped ;
-                rdfs:label "cuneiform wedge" ;
+                rdfs:label "Cuneiform wedge" ;
                 <http://www.w3.org/2004/02/skos/core#definition> "Wedges used to write cuneiform signs" .
 
 
 ###  http://www.purl.org/graphemon#EgyptianHieroglyphicAtomicPart
 :EgyptianHieroglyphicAtomicPart rdf:type owl:Class ;
                                 rdfs:subClassOf :ideographic-typed ;
-                                rdfs:label "egyptian hieroglyphic atomic part" ;
+                                rdfs:label "Egyptian hieroglyphic atomic part" ;
                                 <http://www.w3.org/2004/02/skos/core#definition> "An undividable part of an egyptian hieroglyphic which is used to compose other hieroglyphics" .
 
 
 ###  http://www.purl.org/graphemon#GlyphCollection
 :GlyphCollection rdf:type owl:Class ;
                  rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Collection> ;
-                 rdfs:label "glyph collection" ;
+                 rdfs:label "Glyph collection" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A collection of glyphs" .
 
 
@@ -752,28 +752,28 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
 ###  http://www.purl.org/graphemon#GraphemeAtomicPart
 :GraphemeAtomicPart rdf:type owl:Class ;
                     rdfs:subClassOf :GraphemePart ;
-                    rdfs:label "grapheme atomic part" ;
+                    rdfs:label "Grapheme atomic part" ;
                     <http://www.w3.org/2004/02/skos/core#definition> "A part of a grapheme which cannot be broken down into further parts" ;
                     <http://www.w3.org/2004/02/skos/core#example> "A stroke in a Chinese or Japanese character" .
 
 
 ###  http://www.purl.org/graphemon#GraphemeCognate
 :GraphemeCognate rdf:type owl:Class ;
-                 rdfs:label "grapheme cognate" ;
+                 rdfs:label "Grapheme cognate" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A cognate between graphemes" .
 
 
 ###  http://www.purl.org/graphemon#GraphemeCollection
 :GraphemeCollection rdf:type owl:Class ;
                     rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Collection> ;
-                    rdfs:label "grapheme collection" ;
+                    rdfs:label "Grapheme collection" ;
                     <http://www.w3.org/2004/02/skos/core#definition> "A collection of graphemes" .
 
 
 ###  http://www.purl.org/graphemon#GraphemeComposition
 :GraphemeComposition rdf:type owl:Class ;
                      rdfs:subClassOf :GraphemeManifestation ;
-                     rdfs:label "grapheme composition" ;
+                     rdfs:label "Grapheme composition" ;
                      <http://www.w3.org/2004/02/skos/core#definition> "A composition of individual graphemes which is treated as a single entity in its respective languages" .
 
 
@@ -791,13 +791,13 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
 ###  http://www.purl.org/graphemon#GraphemeEtyInheritanceLink
 :GraphemeEtyInheritanceLink rdf:type owl:Class ;
                             rdfs:subClassOf :GraphemeEtylink ;
-                            rdfs:label "grapheme ety inheritance link" ;
+                            rdfs:label "Grapheme ety inheritance link" ;
                             <http://www.w3.org/2004/02/skos/core#definition> "An etymological link between two graphemes denoting inheritance" .
 
 
 ###  http://www.purl.org/graphemon#GraphemeEtylink
 :GraphemeEtylink rdf:type owl:Class ;
-                 rdfs:label "grapheme etylink" ;
+                 rdfs:label "Grapheme etylink" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "An etymological link between two graphemes or grapheme variants" .
 
 
@@ -808,13 +808,13 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
 
 ###  http://www.purl.org/graphemon#GraphemeManifestation
 :GraphemeManifestation rdf:type owl:Class ;
-                       rdfs:label "grapheme manifestation" ;
+                       rdfs:label "Grapheme manifestation" ;
                        <http://www.w3.org/2004/02/skos/core#definition> "The manifestation of a grapheme in a written or non-written form" .
 
 
 ###  http://www.purl.org/graphemon#GraphemePart
 :GraphemePart rdf:type owl:Class ;
-              rdfs:label "grapheme part" ;
+              rdfs:label "Grapheme part" ;
               <http://www.w3.org/2004/02/skos/core#definition> "A grapheme which is used as part of another grapheme" .
 
 
@@ -833,21 +833,21 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
 ###  http://www.purl.org/graphemon#GraphemeVariant
 :GraphemeVariant rdf:type owl:Class ;
                  rdfs:subClassOf cidoc:TXP9_Grapheme ;
-                 rdfs:label "grapheme variant" ;
+                 rdfs:label "Grapheme variant" ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A variant of a grapheme which is distinguished by a set of criteria, usually varying semantics or shape from a canonical grapheme" .
 
 
 ###  http://www.purl.org/graphemon#GraphemeVariantCollection
 :GraphemeVariantCollection rdf:type owl:Class ;
                            rdfs:subClassOf :GraphemeCollection ;
-                           rdfs:label "grapheme variant collection" ;
+                           rdfs:label "Grapheme variant collection" ;
                            <http://www.w3.org/2004/02/skos/core#definition> "A collection of grapheme variants" .
 
 
 ###  http://www.purl.org/graphemon#ImageBasedSimilarityLink
 :ImageBasedSimilarityLink rdf:type owl:Class ;
                           rdfs:subClassOf :SimilarityLink ;
-                          rdfs:label "image based similarity link" ;
+                          rdfs:label "Image based similarity link" ;
                           <http://www.w3.org/2004/02/skos/core#definition> "A similarity link which is based on an image similarity metric" .
 
 
@@ -866,14 +866,14 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
 
 ###  http://www.purl.org/graphemon#LexicalFormOccurence
 :LexicalFormOccurence rdf:type owl:Class ;
-                      rdfs:label "lexical form occurrence" ;
+                      rdfs:label "Lexical form occurrence" ;
                       <http://www.w3.org/2004/02/skos/core#definition> "An occurrence of a lexical form linked to its grapheme composition" .
 
 
 ###  http://www.purl.org/graphemon#Movement
 :Movement rdf:type owl:Class ;
           rdfs:subClassOf :GraphemeManifestation ;
-          rdfs:label "movement" ;
+          rdfs:label "Movement" ;
           <http://www.w3.org/2004/02/skos/core#definition> "A movement describing a word or letter in a sign language" .
 
 
@@ -957,38 +957,38 @@ cidoc:TXP9_Grapheme rdf:type owl:Class ;
 
 ###  http://www.purl.org/graphemon#SimilarityLink
 :SimilarityLink rdf:type owl:Class ;
-                rdfs:label "similarity link" ;
+                rdfs:label "Similarity link" ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A linkage of similarity between two entities based on a given similarity metric" .
 
 
 ###  http://www.purl.org/graphemon#SimilarityMetric
 :SimilarityMetric rdf:type owl:Class ;
-                  rdfs:label "similarity metric" .
+                  rdfs:label "Similarity metric" .
 
 
 ###  http://www.purl.org/graphemon#StringbasedSimilarityLink
 :StringbasedSimilarityLink rdf:type owl:Class ;
                            rdfs:subClassOf :SimilarityLink ;
-                           rdfs:label "string based similarity link" ;
+                           rdfs:label "String based similarity link" ;
                            <http://www.w3.org/2004/02/skos/core#definition> "A similarity link which base is a String similarity metric" .
 
 
 ###  http://www.purl.org/graphemon#StringbasedSimilarityMetric
 :StringbasedSimilarityMetric rdf:type owl:Class ;
                              rdfs:subClassOf :SimilarityMetric ;
-                             rdfs:label "string based similarity metric" .
+                             rdfs:label "String based similarity metric" .
 
 
 ###  http://www.purl.org/graphemon#Stroketyped
 :Stroketyped rdf:type owl:Class ;
              rdfs:subClassOf :GraphemeAtomicPart ;
-             rdfs:label "stroke-typed" .
+             rdfs:label "Stroke-typed" .
 
 
 ###  http://www.purl.org/graphemon#WordOccurence
 :WordOccurence rdf:type owl:Class ;
                rdfs:subClassOf :LexicalFormOccurence ;
-               rdfs:label "word form occurence" ;
+               rdfs:label "Word form occurence" ;
                <http://www.w3.org/2004/02/skos/core#definition> "An occurence of a word form linked to its grapheme composition" .
 
 
