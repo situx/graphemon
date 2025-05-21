@@ -19,6 +19,7 @@ jobs:
          sudo apt-get install python3-venv python3-wheel -y
          sudo pip3 install wheel pylode==2.13.2 rdflib
          cd docs
+         rm index.html
          pylode -i ../owl/ontology.ttl -o index.html
          pylode -i ../examples/cuneiform_a_example.ttl -o cuneiform_a_example.html
     - name: Deploy 🚀
